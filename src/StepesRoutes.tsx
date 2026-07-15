@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
+import StepesHomepage from "./stepes/stepes_homepage_wireframe_canvas";
 import StepesTechnicalHero from "./stepes/stepes_technical_translation_services_hero_wireframe";
 import EnterpriseSupportSections from "./stepes/enterprise_support_sections_wireframe";
+import StepesDemoRequest from "./stepes/stepes_demo_request_wireframe.tsx";
 import GlobalContentOperationsHero from "./stepes/global_content_operations_hero_wireframe";
 import IsoCertifiedTranslationServices from "./stepes/iso_certified_translation_services_wireframe";
 import ProductEngineeringLocalization from "./stepes/StepesProductEngineeringWireframe_Final";
@@ -22,6 +24,7 @@ import ResourcesSecurityCompliance from "./stepes/Stepes_Security_Compliance_Hub
 export default function StepesRoutes() {
   return (
     <Routes>
+      <Route path="/stepes/StepesHomepage" element={<StepesHomepage />} />
       <Route path="/stepes/TechnicalHero" element={<StepesTechnicalHero />} />
       <Route
         path="/stepes/GlobalContentOperationsHero"
@@ -31,6 +34,7 @@ export default function StepesRoutes() {
         path="/stepes/EnterpriseSupportSections"
         element={<EnterpriseSupportSections />}
       />
+      <Route path="/stepes/StepesDemoRequest" element={<StepesDemoRequest />} />
       <Route
         path="/stepes/IsoCertifiedTranslationServices"
         element={<IsoCertifiedTranslationServices />}
