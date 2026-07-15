@@ -53,7 +53,6 @@ export default function StepesRoutes() {
         path="/stepes/StepesAITranslationInsights"
         element={<StepesAITranslationInsights />}
       />
-      <Route path="/stepes/StepesLegalTeams" element={<StepesLegalTeams />} />
       <Route
         path="/stepes/ResourcesTranslationQuality"
         element={<ResourcesTranslationQuality />}
