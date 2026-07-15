@@ -16,6 +16,8 @@ import ResourcesTranslationGuides from "./stepes/Stepes_Translation_Guides_Hub_F
 import ResourcesGlobalContentStrategy from "./stepes/Stepes_Global_Content_Strategy_Hub_Final_Internal_Links_Pass";
 import ResourcesTranslationGlossary from "./stepes/Stepes_Translation_Glossary_Editorial_Directory";
 import StepesAllResourcesGuides from "./stepes/Stepes_All_Guides_Hub_Final_Eyebrow_Style_Fixed";
+import ResourcesFileFormatSupport from "./stepes/Stepes_File_Format_Support_Final_Handoff";
+import ResourcesSecurityCompliance from "./stepes/Stepes_Security_Compliance_Hub_Final_Refined_v3";
 
 export default function StepesRoutes() {
   return (
@@ -75,6 +77,14 @@ export default function StepesRoutes() {
       <Route
         path="/stepes/StepesAllResourcesGuides"
         element={<StepesAllResourcesGuides />}
+      />
+      <Route
+        path="/stepes/ResourcesFileFormatSupport"
+        element={<ResourcesFileFormatSupport />}
+      />
+      <Route
+        path="/stepes/ResourcesSecurityCompliance"
+        element={<ResourcesSecurityCompliance />}
       />
     </Routes>
   );
