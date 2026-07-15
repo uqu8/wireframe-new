@@ -15,6 +15,7 @@ import ResourcesLocalizationGuides from "./stepes/Stepes_Localization_Guides_Wir
 import ResourcesTranslationGuides from "./stepes/Stepes_Translation_Guides_Hub_Final_Eyebrow_Pass";
 import ResourcesGlobalContentStrategy from "./stepes/Stepes_Global_Content_Strategy_Hub_Final_Internal_Links_Pass";
 import ResourcesTranslationGlossary from "./stepes/Stepes_Translation_Glossary_Editorial_Directory";
+import StepesAllResourcesGuides from "./stepes/Stepes_All_Guides_Hub_Final_Eyebrow_Style_Fixed";
 
 export default function StepesRoutes() {
   return (
@@ -70,6 +71,10 @@ export default function StepesRoutes() {
       <Route
         path="/stepes/ResourcesTranslationGlossary"
         element={<ResourcesTranslationGlossary />}
+      />
+      <Route
+        path="/stepes/StepesAllResourcesGuides"
+        element={<StepesAllResourcesGuides />}
       />
     </Routes>
   );
