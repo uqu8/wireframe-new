@@ -117,6 +117,7 @@ export default function StepesHeaderWireframe() {
   const [activeMenu, setActiveMenu] = useState(null);
   const menuRefs = useRef({});
   const timeoutRef = useRef(null);
+  const navRef = useRef(null);
 
   const navItems = [
     { label: "Platform", href: "#", hasMegaMenu: true },
@@ -175,7 +176,7 @@ export default function StepesHeaderWireframe() {
       style={{ borderColor: brand.border }}
     >
       {/* 外层容器：控制整体宽度和居中 */}
-      <div className="mx-auto max-w-[1440px] px-4 md:px-6 lg:px-10">
+      <div className="mx-auto px-4 md:px-6 lg:px-10">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <div className="flex items-center shrink-0">
@@ -189,8 +190,11 @@ export default function StepesHeaderWireframe() {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation - 增加一级菜单左右间距 */}
+          <nav
+            ref={navRef}
+            className="hidden max-w-[1440px] lg:flex items-center gap-1 md:gap-3 lg:gap-4 xl:gap-5 relative"
+          >
             {navItems.map((item) => {
               const isActive = activeMenu === item.label;
               const MenuComponent = megaMenuMap[item.label];
@@ -204,7 +208,7 @@ export default function StepesHeaderWireframe() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                    className={`flex items-center gap-1 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200 ${
                       isActive ? "bg-slate-50" : "hover:bg-slate-50"
                     }`}
                     style={{ color: "#1e293b" }}
@@ -220,22 +224,23 @@ export default function StepesHeaderWireframe() {
 
                   {isActive && MenuComponent && (
                     <div
-                      className="absolute top-full pt-2 left-0 right-0"
+                      className="mega-menu-container"
                       style={{
-                        position: "absolute",
-                        top: "100%",
+                        position: "fixed",
+                        top: "80px",
                         left: "50%",
                         transform: "translateX(-50%)",
                         width: "100vw",
                         maxWidth: "1440px",
-                        paddingTop: "8px",
+                        padding: "0",
+                        pointerEvents: "auto",
+                        zIndex: 9999,
                       }}
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className="w-full px-4 md:px-6 lg:px-10">
-                        {getMegaMenuComponent(item.label)}
-                      </div>
+                      {/* 移除二级菜单框最外面的灰色间距 - 直接显示内容，不加外层包装 */}
+                      {getMegaMenuComponent(item.label)}
                     </div>
                   )}
                 </div>
