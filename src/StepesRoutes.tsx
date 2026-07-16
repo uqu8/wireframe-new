@@ -24,6 +24,7 @@ import ResourcesSecurityCompliance from "./stepes/page/Stepes_Security_Complianc
 import ResourcesResearchReports from "./stepes/page/Stepes_Research_Reports_Wireframe_Final_Polished";
 import ResourcesWebinars from "./stepes/page/Stepes_Webinars_Hub_Wireframe_Final_Polished";
 import StepesNewsPress from "./stepes/page/Stepes_News_Press_Hub_Wireframe_Customer_Facing_Refined";
+import APIDocumentation from "./stepes/page/Stepes_API_Documentation_Hub_Final_Polish_v13";
 
 export default function StepesRoutes() {
   return (
@@ -106,6 +107,7 @@ export default function StepesRoutes() {
           element={<ResourcesWebinars />}
         />
         <Route path="/stepes/StepesNewsPress" element={<StepesNewsPress />} />
+        <Route path="/stepes/APIDocumentation" element={<APIDocumentation />} />
       </Route>
     </Routes>
   );
