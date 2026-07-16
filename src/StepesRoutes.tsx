@@ -21,6 +21,9 @@ import ResourcesTranslationGlossary from "./stepes/page/Stepes_Translation_Gloss
 import StepesAllResourcesGuides from "./stepes/page/Stepes_All_Guides_Hub_Final_Eyebrow_Style_Fixed";
 import ResourcesFileFormatSupport from "./stepes/page/Stepes_File_Format_Support_Final_Handoff";
 import ResourcesSecurityCompliance from "./stepes/page/Stepes_Security_Compliance_Hub_Final_Refined_v3";
+import ResourcesResearchReports from "./stepes/page/Stepes_Research_Reports_Wireframe_Final_Polished";
+import ResourcesWebinars from "./stepes/page/Stepes_Webinars_Hub_Wireframe_Final_Polished";
+import StepesNewsPress from "./stepes/page/Stepes_News_Press_Hub_Wireframe_Customer_Facing_Refined";
 
 export default function StepesRoutes() {
   return (
@@ -94,6 +97,15 @@ export default function StepesRoutes() {
           path="/stepes/ResourcesSecurityCompliance"
           element={<ResourcesSecurityCompliance />}
         />
+        <Route
+          path="/stepes/ResourcesResearchReports"
+          element={<ResourcesResearchReports />}
+        />
+        <Route
+          path="/stepes/ResourcesWebinars"
+          element={<ResourcesWebinars />}
+        />
+        <Route path="/stepes/StepesNewsPress" element={<StepesNewsPress />} />
       </Route>
     </Routes>
   );
