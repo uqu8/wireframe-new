@@ -25,6 +25,9 @@ import ResourcesResearchReports from "./stepes/page/Stepes_Research_Reports_Wire
 import ResourcesWebinars from "./stepes/page/Stepes_Webinars_Hub_Wireframe_Final_Polished";
 import StepesNewsPress from "./stepes/page/Stepes_News_Press_Hub_Wireframe_Customer_Facing_Refined";
 import APIDocumentation from "./stepes/page/Stepes_API_Documentation_Hub_Final_Polish_v13";
+import TranslationWorkflowAutomation from "./stepes/page/Stepes_Translation_Workflow_Automation_Wireframe_Final_Polished";
+import TranslationQualityAssurance from "./stepes/page/Stepes_Translation_Quality_Assurance_Wireframe_Polished_Line_Fix";
+import WebsiteTranslationServices from "./stepes/page/Stepes_Website_Translation_Services_Wireframe_Complete_Industry_Links_Updated";
 
 export default function StepesRoutes() {
   return (
@@ -108,6 +111,9 @@ export default function StepesRoutes() {
         />
         <Route path="/stepes/StepesNewsPress" element={<StepesNewsPress />} />
         <Route path="/stepes/APIDocumentation" element={<APIDocumentation />} />
+        <Route path="/stepes/TranslationWorkflowAutomation" element={<TranslationWorkflowAutomation />} />
+        <Route path="/stepes/TranslationQualityAssurance" element={<TranslationQualityAssurance />} />
+        <Route path="/stepes/WebsiteTranslationServices" element={<WebsiteTranslationServices />} />
       </Route>
     </Routes>
   );
