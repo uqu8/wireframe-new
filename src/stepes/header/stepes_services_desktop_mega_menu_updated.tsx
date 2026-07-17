@@ -185,7 +185,7 @@ function FeaturedRail() {
 
 export default function StepesServicesDesktopMegaMenuUpdated() {
   return (
-    <div className="bg-[#F7F7F8] px-8 py-8 text-slate-900">
+    <div className="text-slate-900">
       <div className="mx-auto max-w-[1500px] overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
         <div className="border-b border-slate-200 px-7 py-5">
           <div className="flex items-end justify-between gap-8">
@@ -193,7 +193,7 @@ export default function StepesServicesDesktopMegaMenuUpdated() {
               <div className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#8F4C68]">
                 Services
               </div>
-              <h1 className="mt-2 text-[1.9rem] font-semibold tracking-[-0.05em] text-slate-950">
+              <h1 className="mt-2 text-[1.5rem] font-semibold tracking-[-0.02em] text-slate-950">
                 Professional language services for global content and communication.
               </h1>
               <p className="mt-2 text-[14px] leading-6 text-slate-600">

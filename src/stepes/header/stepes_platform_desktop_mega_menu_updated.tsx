@@ -173,7 +173,7 @@ function FeaturedRail() {
 export default function StepesPlatformDesktopMegaMenuUpdated() {
   return (
     <div
-      className="bg-[#F7F7F8] px-8 py-8 text-slate-900"
+      className="text-slate-900"
       style={{ position: "relative", zIndex: 9999 }}
     >
       <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
@@ -183,7 +183,7 @@ export default function StepesPlatformDesktopMegaMenuUpdated() {
               <div className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#8F4C68]">
                 Platform
               </div>
-              <h1 className="mt-2 text-[1.9rem] font-semibold tracking-[-0.05em] text-slate-950">
+              <h1 className="mt-2 text-[1.5rem] font-semibold tracking-[-0.02em] text-slate-950">
                 AI translation platform for enterprise language operations.
               </h1>
               <p className="mt-2 text-[14px] leading-6 text-slate-600">
