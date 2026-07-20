@@ -27,12 +27,15 @@ import StepesNewsPress from "./stepes/page/Stepes_News_Press_Hub_Wireframe_Custo
 import APIDocumentation from "./stepes/page/Stepes_API_Documentation_Hub_Final_Polish_v13";
 import TranslationWorkflowAutomation from "./stepes/page/Stepes_Translation_Workflow_Automation_Wireframe_Final_Polished";
 import TranslationQualityAssurance from "./stepes/page/Stepes_Translation_Quality_Assurance_Wireframe_Polished_Line_Fix";
-import WebsiteTranslationServices from "./stepes/page/Stepes_Website_Translation_Services_Wireframe_Complete_Industry_Links_Updated";
+import WebsiteTranslationServices from "./stepes/page/Stepes_Website_Translation_Services_Wireframe_Complete_Readability_Pass";
 import WebsiteTranslationProxy from "./stepes/page/Stepes_Website_Translation_Proxy_Wireframe_Complete_Final_Polish";
 import MultilingualSEOGuide from "./stepes/page/Stepes_Multilingual_SEO_Guide_Wireframe_Final";
 import WebsiteLocalizationTestingChecklist from "./stepes/page/Stepes_Website_Localization_Testing_Checklist_Wireframe_v1.6";
 import ContinuousWebsiteLocalization from "./stepes/page/Stepes_Continuous_Website_Localization_Guide_Wireframe_v1.2";
 import AIWebsiteHumanReview from "./stepes/page/AI_Website_Translation_With_Human_Review_Wireframe";
+import WebsiteTranslationVSLocalization from "./stepes/page/Stepes_Website_Translation_vs_Localization_Wireframe_v4";
+import ResourcesWebsiteTranslationWorkflows from "./stepes/page/Stepes_Website_Translation_Workflows_Guide_Wireframe_v2";
+import MachineTranslationPostEditing from "./stepes/page/Stepes_Machine_Translation_Post_Editing_Complete_19_Section_Wireframe_v4";
 
 export default function StepesRoutes() {
   return (
@@ -147,6 +150,18 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/AIWebsiteHumanReview"
           element={<AIWebsiteHumanReview />}
+        />
+        <Route
+          path="/stepes/WebsiteTranslationVSLocalization"
+          element={<WebsiteTranslationVSLocalization />}
+        />
+        <Route
+          path="/stepes/ResourcesWebsiteTranslationWorkflows"
+          element={<ResourcesWebsiteTranslationWorkflows />}
+        />
+        <Route
+          path="/stepes/MachineTranslationPostEditing"
+          element={<MachineTranslationPostEditing />}
         />
       </Route>
     </Routes>
