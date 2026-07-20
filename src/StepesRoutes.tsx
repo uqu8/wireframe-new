@@ -36,6 +36,7 @@ import AIWebsiteHumanReview from "./stepes/page/AI_Website_Translation_With_Huma
 import WebsiteTranslationVSLocalization from "./stepes/page/Stepes_Website_Translation_vs_Localization_Wireframe_v4";
 import ResourcesWebsiteTranslationWorkflows from "./stepes/page/Stepes_Website_Translation_Workflows_Guide_Wireframe_v2";
 import MachineTranslationPostEditing from "./stepes/page/Stepes_Machine_Translation_Post_Editing_Complete_19_Section_Wireframe_v4";
+import ResourcesHowToTranslateAWebsite from "./stepes/page/How_to_Translate_a_Website_Guide_Wireframe_Final_QA";
 
 export default function StepesRoutes() {
   return (
@@ -162,6 +163,10 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/MachineTranslationPostEditing"
           element={<MachineTranslationPostEditing />}
+        />
+        <Route
+          path="/stepes/ResourcesHowToTranslateAWebsite"
+          element={<ResourcesHowToTranslateAWebsite />}
         />
       </Route>
     </Routes>
