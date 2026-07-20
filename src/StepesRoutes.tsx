@@ -38,6 +38,7 @@ import ResourcesWebsiteTranslationWorkflows from "./stepes/page/Stepes_Website_T
 import MachineTranslationPostEditing from "./stepes/page/Stepes_Machine_Translation_Post_Editing_Complete_19_Section_Wireframe_v4";
 import ResourcesHowToTranslateAWebsite from "./stepes/page/How_to_Translate_a_Website_Guide_Wireframe_Final_QA";
 import StepesDevelopers from "./stepes/page/Stepes_Developers_Wireframe_v1.3";
+import DevelopersTranslationAPI from "./stepes/page/Stepes_Translation_API_Developer_Page_v15";
 
 export default function StepesRoutes() {
   return (
@@ -172,6 +173,10 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/StepesDevelopers"
           element={<StepesDevelopers />}
+        />
+        <Route
+          path="/stepes/DevelopersTranslationAPI"
+          element={<DevelopersTranslationAPI />}
         />
       </Route>
     </Routes>
