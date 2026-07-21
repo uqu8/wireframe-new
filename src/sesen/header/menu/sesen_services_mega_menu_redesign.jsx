@@ -161,7 +161,7 @@ export default function SesenServicesMegaMenuRedesign() {
   );
 
   return (
-    <div className="min-h-screen bg-[#eef2fb] p-5 font-sans text-slate-950">
+    <div className="min-h-screen font-sans text-slate-950">
       <div className="mx-auto max-w-[1540px] overflow-hidden rounded-[28px] border border-[#dbe4f8] bg-white shadow-[0_20px_55px_rgba(30,52,96,0.12)]">
         <div className="flex items-center justify-between border-b border-[#e7edf8] px-7 py-5">
           <div>

@@ -41,6 +41,7 @@ import StepesDevelopers from "./stepes/page/Stepes_Developers_Wireframe_v1.3";
 import DevelopersTranslationAPI from "./stepes/page/Stepes_Translation_API_Developer_Page_v15";
 import SoftwareLocalizationAPI  from "./stepes/page/Stepes_Software_Localization_API_Hub_Wireframe_v1.2";
 import TranslationAPIGettingStarted from "./stepes/page/Stepes_Translation_API_Getting_Started_Wireframe_v2.3";
+import EnterpriseTranslationIntegrations from "./stepes/page/Stepes_Integrations_Hub_Wireframe_v3";
 
 export default function StepesRoutes() {
   return (
@@ -187,6 +188,10 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/TranslationAPIGettingStarted"
           element={<TranslationAPIGettingStarted />}
+        />
+        <Route
+          path="/stepes/EnterpriseTranslationIntegrations"
+          element={<EnterpriseTranslationIntegrations />}
         />
       </Route>
     </Routes>

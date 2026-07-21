@@ -117,6 +117,7 @@ const megaMenuMap = {
 
 export default function SesenHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const [activeMenu, setActiveMenu] = useState("Solutions"); // 临时调试二级菜单弹出框
   const [activeMenu, setActiveMenu] = useState(null);
   const menuRefs = useRef({});
   const timeoutRef = useRef(null);
