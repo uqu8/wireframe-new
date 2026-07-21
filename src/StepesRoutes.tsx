@@ -43,6 +43,7 @@ import SoftwareLocalizationAPI  from "./stepes/page/Stepes_Software_Localization
 import TranslationAPIGettingStarted from "./stepes/page/Stepes_Translation_API_Getting_Started_Wireframe_v2.3";
 import EnterpriseTranslationIntegrations from "./stepes/page/Stepes_Integrations_Hub_Wireframe_v3";
 import TranslationReportingAnalytics from "./stepes/page/Stepes_Reporting_Analytics_Hub_Wireframe_v3";
+import TranslationApprovalWorkflows from "./stepes/page/Stepes_User_Roles_Approvals_Hub_Wireframe_v3";
 
 export default function StepesRoutes() {
   return (
@@ -197,6 +198,10 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/TranslationReportingAnalytics"
           element={<TranslationReportingAnalytics />}
+        />
+        <Route
+          path="/stepes/TranslationApprovalWorkflows"
+          element={<TranslationApprovalWorkflows />}
         />
       </Route>
     </Routes>
