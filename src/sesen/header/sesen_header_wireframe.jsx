@@ -202,7 +202,7 @@ export default function SesenHeader() {
           {/* Desktop Navigation - 增加导航项数量，调整间距 */}
           <nav
             ref={navRef}
-            className="hidden max-w-[1440px] lg:flex items-center gap-1 md:gap-1.5 lg:gap-2 xl:gap-3 relative"
+            className="hidden max-w-[1440px] lg:flex items-center gap-1 md:gap-1.5 lg:gap-2 xl:gap-8 relative"
           >
             {navItems.map((item) => {
               const isActive = activeMenu === item.label;
