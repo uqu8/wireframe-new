@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 // 导入所有 Mega Menu 组件
-import StepesPlatformDesktopMegaMenuUpdated from "./stepes_platform_desktop_mega_menu_updated";
-import StepesSolutionsDesktopMegaMenuUpdated from "./stepes_solutions_desktop_mega_menu_updated";
-import StepesServicesDesktopMegaMenuUpdated from "./stepes_services_desktop_mega_menu_updated";
-import StepesIndustriesDesktopMegaMenu from "./stepes_industries_desktop_mega_menu";
-import StepesResourcesDesktopMegaMenu from "./stepes_resources_desktop_mega_menu";
-import StepesCompanyDesktopMegaMenu from "./stepes_company_desktop_mega_menu";
+import StepesPlatformDesktopMegaMenuUpdated from "./menu/stepes_platform_desktop_mega_menu_updated";
+import StepesSolutionsDesktopMegaMenuUpdated from "./menu/stepes_solutions_desktop_mega_menu_updated";
+import StepesServicesDesktopMegaMenuUpdated from "./menu/stepes_services_desktop_mega_menu_updated";
+import StepesIndustriesDesktopMegaMenu from "./menu/stepes_industries_desktop_mega_menu";
+import StepesResourcesDesktopMegaMenu from "./menu/stepes_resources_desktop_mega_menu";
+import StepesCompanyDesktopMegaMenu from "./menu/stepes_company_desktop_mega_menu";
 
 const brand = {
   primary: "#C11D63",

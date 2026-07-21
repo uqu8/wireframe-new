@@ -1,21 +1,23 @@
 import React, { useState, useRef, useEffect } from "react";
-// 导入所有 Mega Menu 组件
-import StepesPlatformDesktopMegaMenuUpdated from "./stepes_platform_desktop_mega_menu_updated";
-import StepesSolutionsDesktopMegaMenuUpdated from "./stepes_solutions_desktop_mega_menu_updated";
-import StepesServicesDesktopMegaMenuUpdated from "./stepes_services_desktop_mega_menu_updated";
-import StepesIndustriesDesktopMegaMenu from "./stepes_industries_desktop_mega_menu";
-import StepesResourcesDesktopMegaMenu from "./stepes_resources_desktop_mega_menu";
-import StepesCompanyDesktopMegaMenu from "./stepes_company_desktop_mega_menu";
+// 导入所有 Mega Menu 组件 - 按新的导航标签命名
+import SesenServicesDesktopMegaMenu from "./menu/sesen_services_mega_menu_redesign";
+import SesenLifeSciencesDesktopMegaMenu from "./menu/sesen_life_sciences_mega_menu_redesign";
+import SesenSolutionsDesktopMegaMenu from "./menu/sesen_solutions_mega_menu_redesign";
+import SesenAIDesktopMegaMenu from "./menu/sesen_ai_mega_menu_redesign";
+import SesenResourcesDesktopMegaMenu from "./menu/sesen_resources_mega_menu_redesign";
+import SesenAboutDesktopMegaMenu from "./menu/sesen_resources_mega_menu_redesign";
+import SesenContactDesktopMegaMenu from "./menu/sesen_contact_mega_menu_redesign";
 
 const brand = {
-  primary: "#C11D63",
-  primaryDark: "#9F1D55",
-  primaryDeep: "#7A1542",
-  primarySoft: "#FDF2F7",
-  neutralBg: "#F6F6F7",
-  border: "#E5E7EB",
+  primary: "#0055A4",
+  primaryDark: "#003D7A",
+  primaryDeep: "#002C5A",
+  primarySoft: "#F0F7FF",
+  neutralBg: "#F8FAFC",
+  border: "#E2E8F0",
 };
 
+// 图标组件 (保持不变)
 function ChevronDown(props) {
   return (
     <svg
@@ -62,7 +64,7 @@ function Globe(props) {
     >
       <circle cx="12" cy="12" r="10" />
       <path d="M2 12h20" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4 10z" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4 10z" />
     </svg>
   );
 }
@@ -102,32 +104,36 @@ function X(props) {
   );
 }
 
-// Mega Menu 映射
+// Mega Menu 映射 - 更新为新的导航标签
 const megaMenuMap = {
-  Platform: StepesPlatformDesktopMegaMenuUpdated,
-  Solutions: StepesSolutionsDesktopMegaMenuUpdated,
-  Services: StepesServicesDesktopMegaMenuUpdated,
-  Industries: StepesIndustriesDesktopMegaMenu,
-  Resources: StepesResourcesDesktopMegaMenu,
-  Company: StepesCompanyDesktopMegaMenu,
+  Services: SesenServicesDesktopMegaMenu,
+  "Life Sciences": SesenLifeSciencesDesktopMegaMenu,
+  Solutions: SesenSolutionsDesktopMegaMenu,
+  AI: SesenAIDesktopMegaMenu,
+  Resources: SesenResourcesDesktopMegaMenu,
+  About: SesenAboutDesktopMegaMenu,
+  Contact: SesenContactDesktopMegaMenu,
 };
 
-export default function StepesHeaderWireframe() {
+export default function SesenHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const menuRefs = useRef({});
   const timeoutRef = useRef(null);
   const navRef = useRef(null);
 
+  // 更新导航项 - 按照 Sesen 的业务结构
   const navItems = [
-    { label: "Platform", href: "#", hasMegaMenu: true },
-    { label: "Solutions", href: "#", hasMegaMenu: true },
     { label: "Services", href: "#", hasMegaMenu: true },
-    { label: "Industries", href: "#", hasMegaMenu: true },
+    { label: "Life Sciences", href: "#", hasMegaMenu: true },
+    { label: "Solutions", href: "#", hasMegaMenu: true },
+    { label: "AI", href: "#", hasMegaMenu: true },
     { label: "Resources", href: "#", hasMegaMenu: true },
-    { label: "Company", href: "#", hasMegaMenu: true },
+    { label: "About", href: "#", hasMegaMenu: true },
+    { label: "Contact", href: "#", hasMegaMenu: true },
   ];
 
+  // 交互逻辑 (保持不变)
   const handleMouseEnter = (label) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -175,7 +181,6 @@ export default function StepesHeaderWireframe() {
       className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b"
       style={{ borderColor: brand.border }}
     >
-      {/* 外层容器：控制整体宽度和居中 */}
       <div className="mx-auto px-4 md:px-6 lg:px-10">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
@@ -185,15 +190,19 @@ export default function StepesHeaderWireframe() {
                 className="text-4xl font-bold tracking-[-0.04em]"
                 style={{ color: brand.primary }}
               >
-                Stepes
+                <img 
+                  style={{ maxWidth: '140px', width: '140px'}} 
+                  src="/src/sesen/images/sesen-logo.svg" 
+                  alt="Sesen" 
+                />
               </span>
             </a>
           </div>
 
-          {/* Desktop Navigation - 增加一级菜单左右间距 */}
+          {/* Desktop Navigation - 增加导航项数量，调整间距 */}
           <nav
             ref={navRef}
-            className="hidden max-w-[1440px] lg:flex items-center gap-1 md:gap-3 lg:gap-4 xl:gap-5 relative"
+            className="hidden max-w-[1440px] lg:flex items-center gap-1 md:gap-1.5 lg:gap-2 xl:gap-3 relative"
           >
             {navItems.map((item) => {
               const isActive = activeMenu === item.label;
@@ -208,8 +217,8 @@ export default function StepesHeaderWireframe() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className={`flex items-center gap-1 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                      isActive ? "bg-slate-50" : "hover:bg-slate-50"
+                    className={`flex items-center gap-1 px-2.5 py-2.5 text-sm font-medium rounded-md transition-colors duration-200 whitespace-nowrap ${
+                      isActive ? "bg-slate-100/80" : "hover:bg-slate-100/60"
                     }`}
                     style={{ color: "#1e293b" }}
                     onClick={() => handleMenuToggle(item.label)}
@@ -239,7 +248,6 @@ export default function StepesHeaderWireframe() {
                       onMouseEnter={() => handleMouseEnter(item.label)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      {/* 移除二级菜单框最外面的灰色间距 - 直接显示内容，不加外层包装 */}
                       {getMegaMenuComponent(item.label)}
                     </div>
                   )}
@@ -250,31 +258,15 @@ export default function StepesHeaderWireframe() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-1 md:gap-2">
-            <a
-              href="#"
-              className="hidden md:flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-slate-50"
-              style={{ color: "#1e293b" }}
-            >
-              Help
-            </a>
-
-            <a
-              href="#"
-              className="hidden md:flex items-center px-4 py-2 text-sm font-semibold rounded-full border transition-all duration-200 hover:bg-slate-50"
-              style={{ borderColor: brand.border, color: "#1e293b" }}
-            >
-              Login
-            </a>
-
             <button
-              className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors duration-200 hover:bg-slate-50"
+              className="flex h-9 w-9 items-center justify-center rounded-md transition-colors duration-200 hover:bg-slate-100/60"
               aria-label="Search"
             >
               <Search className="h-5 w-5" style={{ color: "#64748b" }} />
             </button>
 
             <button
-              className="hidden md:flex h-9 w-9 items-center justify-center rounded-lg transition-colors duration-200 hover:bg-slate-50"
+              className="hidden md:flex h-9 w-9 items-center justify-center rounded-md transition-colors duration-200 hover:bg-slate-100/60"
               aria-label="Language"
             >
               <Globe className="h-5 w-5" style={{ color: "#64748b" }} />
@@ -282,7 +274,7 @@ export default function StepesHeaderWireframe() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex lg:hidden h-9 w-9 items-center justify-center rounded-lg transition-colors duration-200 hover:bg-slate-50"
+              className="flex lg:hidden h-9 w-9 items-center justify-center rounded-md transition-colors duration-200 hover:bg-slate-100/60"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -312,24 +304,6 @@ export default function StepesHeaderWireframe() {
                   <ChevronDown className="h-4 w-4 text-slate-400" />
                 </a>
               ))}
-              <div
-                className="border-t my-2"
-                style={{ borderColor: brand.border }}
-              />
-              <a
-                href="#"
-                className="flex items-center px-3 py-3 text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-slate-50"
-                style={{ color: "#1e293b" }}
-              >
-                Help
-              </a>
-              <a
-                href="#"
-                className="flex items-center justify-center px-3 py-3 text-sm font-semibold rounded-full border mt-1 transition-all duration-200 hover:bg-slate-50"
-                style={{ borderColor: brand.border, color: "#1e293b" }}
-              >
-                Login
-              </a>
             </nav>
           </div>
         )}
