@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import StepesLayout from "./stepes/Layout/StepesLayout";
-import routeConfig from "./stepes/routes";
+import routeConfig from "./stepes/StepesRoutes";
 
 // 自动扫描 page 下所有 tsx/jsx
 const pages = {
