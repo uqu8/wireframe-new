@@ -47,6 +47,7 @@ import TranslationApprovalWorkflows from "./stepes/page/Stepes_User_Roles_Approv
 import DevelopersWebhooks from "./stepes/page/Stepes_Webhooks_Wireframe_Polished_v3";
 import ContactUs from "./stepes/page/Stepes_Contact_Us_Wireframe_Final_Polished";
 import BecomeATranslator from "./stepes/page/Stepes_Become_a_Translator_Wireframe_Centered_Hero_Final";
+import TranslatorResources from "./stepes/page/Translator_Resources_Wireframe";
 
 export default function StepesRoutes() {
   return (
@@ -217,6 +218,10 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/BecomeATranslator"
           element={<BecomeATranslator />}
+        />
+        <Route
+          path="/stepes/TranslatorResources"
+          element={<TranslatorResources />}
         />
       </Route>
     </Routes>
