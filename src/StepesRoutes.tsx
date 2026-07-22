@@ -44,6 +44,9 @@ import TranslationAPIGettingStarted from "./stepes/page/Stepes_Translation_API_G
 import EnterpriseTranslationIntegrations from "./stepes/page/Stepes_Integrations_Hub_Wireframe_v3";
 import TranslationReportingAnalytics from "./stepes/page/Stepes_Reporting_Analytics_Hub_Wireframe_v3";
 import TranslationApprovalWorkflows from "./stepes/page/Stepes_User_Roles_Approvals_Hub_Wireframe_v3";
+import DevelopersWebhooks from "./stepes/page/Stepes_Webhooks_Wireframe_Polished_v3";
+import ContactUs from "./stepes/page/Stepes_Contact_Us_Wireframe_Final_Polished";
+import BecomeATranslator from "./stepes/page/Stepes_Become_a_Translator_Wireframe_Centered_Hero_Final";
 
 export default function StepesRoutes() {
   return (
@@ -202,6 +205,18 @@ export default function StepesRoutes() {
         <Route
           path="/stepes/TranslationApprovalWorkflows"
           element={<TranslationApprovalWorkflows />}
+        />
+        <Route
+          path="/stepes/DevelopersWebhooks"
+          element={<DevelopersWebhooks />}
+        />
+        <Route
+          path="/stepes/ContactUs"
+          element={<ContactUs />}
+        />
+        <Route
+          path="/stepes/BecomeATranslator"
+          element={<BecomeATranslator />}
         />
       </Route>
     </Routes>
