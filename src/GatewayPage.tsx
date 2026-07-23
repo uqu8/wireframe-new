@@ -113,7 +113,7 @@ function BrandCard({
       <div className="relative z-10">
         <h3 className="mb-4">
           <span 
-            className="text-4xl font-bold tracking-[-0.04em]"
+            className="text-3xl font-bold tracking-[-0.04em]"
             style={{ color: brandColor }}
           >
             {brand}
@@ -124,13 +124,13 @@ function BrandCard({
           {description}
         </p>
 
-        <div className="mt-6 flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3" style={{ color: hoverColor }}>
+        <div className="mt-6 mb-6 flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3" style={{ color: hoverColor }}>
           {ctaText}
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
 
         <div className="mt-3 flex items-center gap-1.5 text-sm text-slate-400">
-          <CheckBadge className="h-3.5 w-3.5" style={{ color: hoverColor }} />
+          <CheckBadge className="h-10 w-10" style={{ color: hoverColor }} />
           <span>{detail}</span>
         </div>
       </div>
