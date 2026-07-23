@@ -189,6 +189,22 @@ const routes = [
       name: "Translator_Resources_Wireframe",
       path: "/stepes/TranslatorResources",
     },
+    {
+      name: "Stepes_Renewable_Energy_Translation_Services_Wireframe_v2",
+      path: "/stepes/RenewableEnergyTranslationServices",
+    },
+    {
+      name: "Stepes_Gaming_Industry_Page_Wireframe_Eyebrow_Fix",
+      path: "/stepes/GamingTranslationServices",
+    },
+    {
+      name: "Stepes_Multilingual_AI_Data_Services_Wireframe_Final",
+      path: "/stepes/MultilingualAIDataServices",
+    },
+    {
+      name: "stepes-software-saas-industry-hub-wireframe-polished",
+      path: "/stepes/SoftwareTranslationServices",
+    },
   ];
   
   export default routes;
