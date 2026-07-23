@@ -7,20 +7,20 @@ const routes = [
     },
     {
       name: "SesenHero",
-      path: "/sesen/SesenHero",
+      path: "/sesen/homepage/",
     },
     {
       name: "medical_scientific_translation_hero_wireframe",
-      path: "/sesen/SesenmedicalpageHero",
+      path: "/sesen/medical-scientific-translation/",
     },
     {
       name: "certified_translation_resource_hero_wireframe",
-      path: "/sesen/SesenCertifiedHero",
+      path: "/sesen/certified-translation-resource/",
     },
     {
       name: "sesen_ai_assisted_clinical_translation_risks_wireframe",
-      path: "/sesen/SesenRisksHero",
-    }
+      path: "/sesen/ai-assisted-clinical-translation-risks/",
+    },
   ];
   
   export default routes;
