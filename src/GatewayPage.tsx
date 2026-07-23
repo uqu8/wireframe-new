@@ -54,24 +54,6 @@ function CheckBadge({ className = "h-4 w-4" }) {
   );
 }
 
-function GlobeIcon({ className = "h-4 w-4" }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="2" y1="12" x2="22" y2="12" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
-  );
-}
-
 // ===== Components =====
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -94,6 +76,7 @@ function BrandCard({
   gradientFrom,
   gradientTo,
   iconBg,
+  brandColor,
 }: { 
   href: string; 
   brand: string; 
@@ -106,6 +89,7 @@ function BrandCard({
   gradientFrom: string;
   gradientTo: string;
   iconBg: string;
+  brandColor: string;
 }) {
   return (
     <a
@@ -127,29 +111,15 @@ function BrandCard({
       />
       
       <div className="relative z-10">
-        <div className="flex items-center gap-3">
-          <div 
-            className="flex h-10 w-10 items-center justify-center rounded-xl transition-colors duration-300"
-            style={{ backgroundColor: iconBg }}
-          >
-            {brand === 'Stepes' ? (
-              <span className="text-lg font-bold" style={{ color: hoverColor }}>S</span>
-            ) : (
-              <span className="text-lg font-bold" style={{ color: hoverColor }}>S</span>
-            )}
-          </div>
-          <span className="text-lg font-bold text-slate-900">{brand}</span>
+        <h3 className="mb-4">
           <span 
-            className="ml-auto rounded-full px-3 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
-            style={{ backgroundColor: `${hoverColor}15`, color: hoverColor }}
+            className="text-4xl font-bold tracking-[-0.04em]"
+            style={{ color: brandColor }}
           >
-            {tag}
+            {brand}
           </span>
-        </div>
-
-        <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-950">
-          {brand}
         </h3>
+        
         <p className="mt-2.5 text-[15px] leading-7 text-slate-600">
           {description}
         </p>
@@ -265,6 +235,7 @@ export default function GatewayPage() {
                   gradientFrom="#FCEAF2"
                   gradientTo="#FDF2F7"
                   iconBg="#FCEAF2"
+                  brandColor="#C11D63"
                 />
 
                 {/* Sesen Card */}
@@ -280,6 +251,7 @@ export default function GatewayPage() {
                   gradientFrom="#E8EFFB"
                   gradientTo="#F0F5FF"
                   iconBg="#E8EFFB"
+                  brandColor="#437eeb"
                 />
               </div>
 
