@@ -6,20 +6,16 @@ const routes = [
       path: "/",
     },
     {
-      name: "SesenHero",
-      path: "/sesen/homepage/",
-    },
-    {
       name: "medical_scientific_translation_hero_wireframe",
-      path: "/sesen/medical-scientific-translation/",
+      path: "/medical-scientific-translation/",
     },
     {
       name: "certified_translation_resource_hero_wireframe",
-      path: "/sesen/certified-translation-resource/",
+      path: "/certified-translation-resource/",
     },
     {
       name: "sesen_ai_assisted_clinical_translation_risks_wireframe",
-      path: "/sesen/ai-assisted-clinical-translation-risks/",
+      path: "/ai-assisted-clinical-translation-risks/",
     },
   ];
   
