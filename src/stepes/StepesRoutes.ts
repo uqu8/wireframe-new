@@ -217,6 +217,10 @@ const routes = [
     name: "stepes_travel_hospitality_wireframe",
     path: "/stepes/travel-hospitality-translation-services/",
   },
+  {
+    name: "Stepes_Retail_Ecommerce_Industry_Hub_Wireframe_Final_Polish",
+    path: "/stepes/retail-ecommerce-translation-services/",
+  },
 ];
 
 export default routes;
