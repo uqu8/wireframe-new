@@ -121,7 +121,7 @@ function ContactIcon({ type }) {
 
 export default function PremiumSesenFooter() {
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800">
+    <div className="bg-white font-sans text-slate-800">
       <div className="flex min-h-[520px] items-end">
         <footer className="relative w-full overflow-hidden border-t border-slate-200 bg-[#F6F8FC]">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3478E5]/40 to-transparent" />
