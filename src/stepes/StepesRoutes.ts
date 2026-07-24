@@ -233,6 +233,10 @@ const routes = [
     name: "MultilingualCustomerSupportWireframe_Final_GlobeCTA",
     path: "/solutions/multilingual-customer-support/",
   },
+  {
+    name: "Stepes_Translation_Memory_Platform_Wireframe_v3",
+    path: "/translation-memory/",
+  },
 ];
 
 export default routes;
