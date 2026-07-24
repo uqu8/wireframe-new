@@ -237,6 +237,10 @@ const routes = [
     name: "Stepes_Translation_Memory_Platform_Wireframe_v3",
     path: "/translation-memory/",
   },
+  {
+    name: "Stepes_Healthcare_Translation_Services_Wireframe",
+    path: "/healthcare-translation-services/",
+  },
 ];
 
 export default routes;
