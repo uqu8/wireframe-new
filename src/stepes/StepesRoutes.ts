@@ -221,6 +221,18 @@ const routes = [
     name: "Stepes_Retail_Ecommerce_Industry_Hub_Wireframe_Final_Polish",
     path: "/retail-ecommerce-translation-services/",
   },
+  {
+    name: "stepes-software-localization-services-wireframe-v17",
+    path: "/software-localization-services/",
+  },
+  {
+    name: "stepes-ai-machine-learning-translation-services-wireframe",
+    path: "/ai-machine-learning-translation-services/",
+  },
+  {
+    name: "MultilingualCustomerSupportWireframe_Final_GlobeCTA",
+    path: "/solutions/multilingual-customer-support/",
+  },
 ];
 
 export default routes;
