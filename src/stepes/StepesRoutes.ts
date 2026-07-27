@@ -261,6 +261,26 @@ const routes = [
     name: "Stepes_Industries_Hub_Wireframe_v4.0",
     path: "/industries/",
   },
+  {
+    name: "Stepes_Software_and_SaaS_Localization_Guide_Wireframe",
+    path: "/resources/localization-guides/software-saas-localization-guide/",
+  },
+  {
+    name: "Stepes_Insurance_Translation_Services_Wireframe",
+    path: "/insurance-translation-services/",
+  },
+  {
+    name: "stepes-enterprise-voice-over-services-wireframe",
+    path: "/voice-over-services/",
+  },
+  {
+    name: "stepes-manufacturing-translation-services-wireframe-design-polished",
+    path: "/manufacturing-translation-services/",
+  },
+  {
+    name: "Stepes_Multilingual_Desktop_Publishing_Wireframe_Bullet_Alignment_Final",
+    path: "/multilingual-desktop-publishing/",
+  },
 ];
 
 export default routes;
