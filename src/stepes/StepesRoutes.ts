@@ -281,6 +281,10 @@ const routes = [
     name: "Stepes_Multilingual_Desktop_Publishing_Wireframe_Bullet_Alignment_Final",
     path: "/multilingual-desktop-publishing/",
   },
+  {
+    name: "Stepes_eLearning_Translation_Services_Hub_Wireframe_v4",
+    path: "/elearning-training-translation-services/",
+  },
 ];
 
 export default routes;
