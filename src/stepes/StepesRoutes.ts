@@ -238,11 +238,7 @@ const routes = [
     path: "/translation-memory/",
   },
   {
-<<<<<<< HEAD
     name: "Stepes_Healthcare_Translation_Services_Wirefram",
-=======
-    name: "Stepes_Healthcare_Translation_Services_Wireframe",
->>>>>>> 0ec2d66629c95db805214f52c1d8157dd2b33d42
     path: "/healthcare-translation-services/",
   },
 ];
