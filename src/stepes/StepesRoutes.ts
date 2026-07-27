@@ -1,0 +1,246 @@
+// src/stepes/routes.ts
+
+const routes = [
+  {
+    name: "stepes_homepage_wireframe_canvas",
+    path: "/",
+  },
+  {
+    name: "stepes_technical_translation_services_hero_wireframe",
+    path: "/technical-hero/",
+  },
+  {
+    name: "global_content_operations_hero_wireframe",
+    path: "/global-content-operations-hero/",
+  },
+  {
+    name: "enterprise_support_sections_wireframe",
+    path: "/enterprise-support-sections/",
+  },
+  {
+    name: "stepes_demo_request_wireframe",
+    path: "/stepes-demo-request/",
+  },
+  {
+    name: "iso_certified_translation_services_wireframe",
+    path: "/iso-certified-translation-services/",
+  },
+  {
+    name: "StepesProductEngineeringWireframe_Final",
+    path: "/product-engineering-localization/",
+  },
+  {
+    name: "Stepes_Resource_Center_Wireframe_Cost_Icon_Polished",
+    path: "/localization-resource-center/",
+  },
+  {
+    name: "Stepes_Procurement_Teams_Wireframe_Internal_Links_Final",
+    path: "/procurement-teams/",
+  },
+  {
+    name: "Stepes_AIPoweredTranslationWorkflows_Sections_1-12_Internal_Links_Final",
+    path: "/aipowered-translation-workflows/",
+  },
+  {
+    name: "Stepes_Legal_Teams_Wireframe_Internal_Links_Pass_v8",
+    path: "/stepes-legal-teams/",
+  },
+  {
+    name: "AITranslationInsightsWireframe_LinksReviewed",
+    path: "/stepes-aitranslation-insights/",
+  },
+  {
+    name: "Stepes_Translation_Quality_Governance_Hub_Final_Reviewed",
+    path: "/resources-translation-quality/",
+  },
+  {
+    name: "Stepes_Localization_Guides_Wireframe_Final_Internal_Links",
+    path: "/resources-localization-guides/",
+  },
+  {
+    name: "Stepes_Translation_Guides_Hub_Final_Eyebrow_Pass",
+    path: "/resources-translation-guides/",
+  },
+  {
+    name: "Stepes_Global_Content_Strategy_Hub_Final_Internal_Links_Pass",
+    path: "/resources-global-content-strategy/",
+  },
+  {
+    name: "Stepes_Translation_Glossary_Editorial_Directory",
+    path: "/resources-translation-glossary/",
+  },
+  {
+    name: "Stepes_All_Guides_Hub_Final_Eyebrow_Style_Fixed",
+    path: "/stepes-all-resources-guides/",
+  },
+  {
+    name: "Stepes_File_Format_Support_Final_Handoff",
+    path: "/resources-file-format-support/",
+  },
+  {
+    name: "Stepes_Security_Compliance_Hub_Final_Refined_v3",
+    path: "/resources-security-compliance/",
+  },
+  {
+    name: "Stepes_Research_Reports_Wireframe_Final_Polished",
+    path: "/resources-research-reports/",
+  },
+  {
+    name: "Stepes_Webinars_Hub_Wireframe_Final_Polished",
+    path: "/resources-webinars/",
+  },
+  {
+    name: "Stepes_News_Press_Hub_Wireframe_Customer_Facing_Refined",
+    path: "/stepes-news-press/",
+  },
+  {
+    name: "Stepes_API_Documentation_Hub_Final_Polish_v13",
+    path: "/apidocumentation/",
+  },
+  {
+    name: "Stepes_Translation_Workflow_Automation_Wireframe_Final_Polished",
+    path: "/translation-workflow-automation/",
+  },
+  {
+    name: "Stepes_Translation_Quality_Assurance_Wireframe_Polished_Line_Fix",
+    path: "/translation-quality-assurance/",
+  },
+  {
+    name: "Stepes_Website_Translation_Services_Wireframe_Complete_Readability_Pass",
+    path: "/website-translation-services/",
+  },
+  {
+    name: "Stepes_Website_Translation_Proxy_Wireframe_Complete_Final_Polish",
+    path: "/website-translation-proxy/",
+  },
+  {
+    name: "Stepes_Multilingual_SEO_Guide_Wireframe_Final",
+    path: "/multilingual-seoguide/",
+  },
+  {
+    name: "Stepes_Website_Localization_Testing_Checklist_Wireframe_v1.6",
+    path: "/website-localization-testing-checklist/",
+  },
+  {
+    name: "Stepes_Continuous_Website_Localization_Guide_Wireframe_v1.2",
+    path: "/continuous-website-localization/",
+  },
+  {
+    name: "AI_Website_Translation_With_Human_Review_Wireframe",
+    path: "/aiwebsite-human-review/",
+  },
+  {
+    name: "Stepes_Website_Translation_vs_Localization_Wireframe_v4",
+    path: "/website-translation-vslocalization/",
+  },
+  {
+    name: "Stepes_Website_Translation_Workflows_Guide_Wireframe_v2",
+    path: "/resources-website-translation-workflows/",
+  },
+  {
+    name: "Stepes_Machine_Translation_Post_Editing_Complete_19_Section_Wireframe_v4",
+    path: "/machine-translation-post-editing/",
+  },
+  {
+    name: "How_to_Translate_a_Website_Guide_Wireframe_Final_QA",
+    path: "/resources-how-to-translate-awebsite/",
+  },
+  {
+    name: "Stepes_Developers_Wireframe_v1.3",
+    path: "/stepes-developers/",
+  },
+  {
+    name: "Stepes_Translation_API_Developer_Page_v15",
+    path: "/developers-translation-api/",
+  },
+  {
+    name: "Stepes_Software_Localization_API_Hub_Wireframe_v1.2",
+    path: "/software-localization-api/",
+  },
+  {
+    name: "Stepes_Translation_API_Getting_Started_Wireframe_v2.3",
+    path: "/translation-apigetting-started/",
+  },
+  {
+    name: "Stepes_Integrations_Hub_Wireframe_v3",
+    path: "/enterprise-translation-integrations/",
+  },
+  {
+    name: "Stepes_Reporting_Analytics_Hub_Wireframe_v3",
+    path: "/translation-reporting-analytics/",
+  },
+  {
+    name: "Stepes_User_Roles_Approvals_Hub_Wireframe_v3",
+    path: "/translation-approval-workflows/",
+  },
+  {
+    name: "Stepes_Webhooks_Wireframe_Polished_v3",
+    path: "/developers-webhooks/",
+  },
+  {
+    name: "Stepes_Contact_Us_Wireframe_Final_Polished",
+    path: "/contact-us/",
+  },
+  {
+    name: "Stepes_Become_a_Translator_Wireframe_Centered_Hero_Final",
+    path: "/become-atranslator/",
+  },
+  {
+    name: "Translator_Resources_Wireframe",
+    path: "/translator-resources/",
+  },
+  {
+    name: "Stepes_Renewable_Energy_Translation_Services_Wireframe_v2",
+    path: "/renewable-energy-translation-services/",
+  },
+  {
+    name: "Stepes_Gaming_Industry_Page_Wireframe_Eyebrow_Fix",
+    path: "/gaming-translation-services/",
+  },
+  {
+    name: "Stepes_Multilingual_AI_Data_Services_Wireframe_Final",
+    path: "/multilingual-ai-data-services/",
+  },
+  {
+    name: "stepes-software-saas-industry-hub-wireframe-polished",
+    path: "/software-translation-services/",
+  },
+  {
+    name: "Stepes_Energy_Translation_Services_Wireframe_Polished",
+    path: "/energy-translation-services/",
+  },
+  {
+    name: "Stepes_Media_Entertainment_Translation_Services_Wireframe_Polished",
+    path: "/media-entertainment-translation-services/",
+  },
+  {
+    name: "stepes_travel_hospitality_wireframe",
+    path: "/travel-hospitality-translation-services/",
+  },
+  {
+    name: "Stepes_Retail_Ecommerce_Industry_Hub_Wireframe_Final_Polish",
+    path: "/retail-ecommerce-translation-services/",
+  },
+  {
+    name: "stepes-software-localization-services-wireframe-v17",
+    path: "/software-localization-services/",
+  },
+  {
+    name: "stepes-ai-machine-learning-translation-services-wireframe",
+    path: "/ai-machine-learning-translation-services/",
+  },
+  {
+    name: "MultilingualCustomerSupportWireframe_Final_GlobeCTA",
+    path: "/solutions/multilingual-customer-support/",
+  },
+  {
+    name: "Stepes_Translation_Memory_Platform_Wireframe_v3",
+    path: "/translation-memory/",
+  },
+  {
+    name: "Stepes_Healthcare_Translation_Services_Wirefram",
+    path: "/healthcare-translation-services/",
+  },
+];
+
+export default routes;
