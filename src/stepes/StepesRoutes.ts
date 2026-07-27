@@ -241,6 +241,26 @@ const routes = [
     name: "Stepes_Healthcare_Translation_Services_Wirefram",
     path: "/healthcare-translation-services/",
   },
+  {
+    name: "Stepes_Continuous_Software_Localization_Resource_Guide_Wireframe",
+    path: "/resources/localization-guides/continuous-software-localization/",
+  },
+  {
+    name: "Stepes_Internationalization_vs_Localization_Resource_Guide_Wireframe",
+    path: "/resources/localization-guides/internationalization-vs-localization/",
+  },
+  {
+    name: "Stepes_Software_Localization_Testing_Checklist_Wireframe",
+    path: "/resources/localization-guides/software-localization-testing-checklist/",
+  },
+  {
+    name: "Stepes_Resrouce_Localization_Guides_Wireframe_Final_Canonical_Links",
+    path: "/resources/localization-guides/",
+  },
+  {
+    name: "Stepes_Industries_Hub_Wireframe_v4.0",
+    path: "/industries/",
+  },
 ];
 
 export default routes;
