@@ -285,6 +285,14 @@ const routes = [
     name: "Stepes_eLearning_Translation_Services_Hub_Wireframe_v4",
     path: "/elearning-training-translation-services/",
   },
+  {
+    name: "Stepes_Terminology_Management_Wireframe_v1.3",
+    path: "/terminology-management/",
+  },
+  {
+    name: "Stepes_Translation_API_Wireframe_v1.2",
+    path: "/translation-api/",
+  },
 ];
 
 export default routes;
