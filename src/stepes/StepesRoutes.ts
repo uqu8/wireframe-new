@@ -309,6 +309,10 @@ const routes = [
     name: "Stepes_Legal_Translation_Services_Wireframe_v1.3",
     path: "/legal-translation-services/",
   },
+  {
+    name: "Stepes_French_Canadian_Translation_Services_Wireframe_v5",
+    path: "/french-canadian-translation-services/",
+  },
 ];
 
 export default routes;
