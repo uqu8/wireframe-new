@@ -297,6 +297,18 @@ const routes = [
     name: "Stepes_Software_Localization_API_Getting_Started_Wireframe_v1.2",
     path: "/developers/software-localization-api/getting-started/",
   },
+  {
+    name: "Stepes_French_Translation_Services_Pillar_Wireframe_v1.6",
+    path: "/french-translation-services/",
+  },
+  {
+    name: "Stepes_Legal_Translation_Best_Practices_Guide_Wireframe_v1.2",
+    path: "/resources/legal-translation/legal-translation-best-practices/",
+  },
+  {
+    name: "Stepes_Legal_Translation_Services_Wireframe_v1.3",
+    path: "/legal-translation-services/",
+  },
 ];
 
 export default routes;
