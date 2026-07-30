@@ -321,6 +321,10 @@ const routes = [
     name: "Stepes_German_Translation_Services_Pillar_Wireframe_v3",
     path: "/german-translation-services/",
   },
+  {
+    name: "Stepes_Spanish_Translation_Services_Pillar_Wireframe_v3",
+    path: "/spanish-translation-services/",
+  },
 ];
 
 export default routes;
