@@ -337,6 +337,22 @@ const routes = [
     name: "Stepes_App_Localization_Services_Wireframe",
     path: "/app-localization-services/",
   },
+  {
+    name: "Stepes_Medical_Translation_Services_Wireframe_v3",
+    path: "/medical-translation-services/",
+  },
+  {
+    name: "Stepes_AI_Translation_for_Medical_Devices_Resource_Guide_Wireframe_v3",
+    path: "/resources/ai-translation-insights/ai-translation-for-medical-devices/",
+  },
+  {
+    name: "Stepes_Medical_Device_Software_Localization_Checklist_Wireframe_v3",
+    path: "/resources/localization-guides/medical-device-software-localization-checklist/",
+  },
+  {
+    name: "Stepes_Electronic_IFU_Translation_Version_Control_Resource_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/electronic-ifu-translation-version-control/",
+  },
 ];
 
 export default routes;
