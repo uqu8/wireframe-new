@@ -353,6 +353,22 @@ const routes = [
     name: "Stepes_Electronic_IFU_Translation_Version_Control_Resource_Guide_Wireframe_v3",
     path: "/resources/localization-guides/electronic-ifu-translation-version-control/",
   },
+  {
+    name: "Stepes_Medical_Device_IFU_Translation_Guide_Wireframe_v3",
+    path: "/resources/translation-guides/medical-device-ifu-translation-guide/",
+  },
+  {
+    name: "Stepes_Medical_Device_Translation_Services_Wireframe_v3",
+    path: "/medical-device-translation-services/",
+  },
+  {
+    name: "Stepes_Government_Translation_Services_Wireframe_v3",
+    path: "/government-translation-services/",
+  },
+  {
+    name: "Stepes_Game_Localization_Services_Wireframe_v3",
+    path: "/video-game-translation-services/",
+  },
 ];
 
 export default routes;
