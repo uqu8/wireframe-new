@@ -369,6 +369,22 @@ const routes = [
     name: "Stepes_Game_Localization_Services_Wireframe_v3",
     path: "/video-game-translation-services/",
   },
+  {
+    name: "Stepes_On_Site_Interpreting_Services_Wireframe_v3",
+    path: "/on-site-interpretater-services/",
+  },
+  {
+    name: "Stepes_Conference_Event_Interpreting_Wireframe_v3",
+    path: "/conference-event-interpreting/",
+  },
+  {
+    name: "Stepes_Remote_Interpreting_Services_Wireframe_v3",
+    path: "/interpretation-services/",
+  },
+  {
+    name: "Stepes_Financial_Translation_Services_Wireframe_v3",
+    path: "/financial-translation-services/",
+  },
 ];
 
 export default routes;
