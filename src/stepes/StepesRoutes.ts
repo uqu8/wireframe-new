@@ -385,6 +385,18 @@ const routes = [
     name: "Stepes_Financial_Translation_Services_Wireframe_v3",
     path: "/financial-translation-services/",
   },
+  {
+    name: "Stepes_Patent_Translation_Services_Wireframe_v3",
+    path: "/patent-translation-services/",
+  },
+  {
+    name: "Stepes_AI_Translation_Services_Wireframe_v6",
+    path: "/ai-translation-services/",
+  },
+  {
+    name: "Stepes_Resource_AI_Translation_Insights_Wireframe_v4",
+    path: "/resources/ai-translation-insights/",
+  },
 ];
 
 export default routes;
