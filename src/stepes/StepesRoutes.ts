@@ -397,6 +397,34 @@ const routes = [
     name: "Stepes_Resource_AI_Translation_Insights_Wireframe_v4",
     path: "/resources/ai-translation-insights/",
   },
+  {
+    name: "Stepes_Website_Translation_Quote_Wireframe_Hero_Color_Refined",
+    path: "/website-translation-services/get-a-quote/",
+  },
+  {
+    name: "Stepes_iOS_App_Localization_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/ios-app-localization-guide/",
+  },
+  {
+    name: "Stepes_How_to_Prepare_a_Mobile_App_for_Localization_Wireframe_Final_Text_Led_Hero",
+    path: "/resources/localization-guides/how-to-prepare-an-app-for-localization/",
+  },
+  {
+    name: "Stepes_Telecommunications_Translation_Services_Wireframe_Final_Polish",
+    path: "/telecommunications-translation-services/",
+  },
+  {
+    name: "Stepes_Electronics_Translation_Services_Wireframe_Polished",
+    path: "/electronics-translation-services/",
+  },
+  {
+    name: "Stepes_Automotive_Translation_Services_Wireframe_Final",
+    path: "/automotive-translation-services/",
+  },
+  {
+    name: "Stepes_Android_App_Localization_Guide_Wireframe_v4",
+    path: "/resources/localization-guides/android-app-localization-guide/",
+  },
 ];
 
 export default routes;
