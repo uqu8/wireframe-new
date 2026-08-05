@@ -425,6 +425,10 @@ const routes = [
     name: "Stepes_Android_App_Localization_Guide_Wireframe_v4",
     path: "/resources/localization-guides/android-app-localization-guide/",
   },
+  {
+    name: "Stepes_Mobile_App_Localization_Testing_Checklist_Wireframe_v3",
+    path: "/resources/localization-guides/mobile-app-localization-testing-checklist/",
+  },
 ];
 
 export default routes;
