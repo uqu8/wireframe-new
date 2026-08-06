@@ -453,6 +453,10 @@ const routes = [
     name: "Stepes_EV_Battery_Charging_Content_Localization_Guide_Wireframe_v3",
     path: "/resources/localization-guides/ev-battery-charging-content-localization/",
   },
+  {
+    name: "Stepes_SAE_J2450_Automotive_Translation_Quality_Guide_Wireframe_v3",
+    path: "/resources/translation-guides/sae-j2450-automotive-translation-quality/",
+  },
 ];
 
 export default routes;
