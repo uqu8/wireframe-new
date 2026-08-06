@@ -457,6 +457,14 @@ const routes = [
     name: "Stepes_SAE_J2450_Automotive_Translation_Quality_Guide_Wireframe_v3",
     path: "/resources/translation-guides/sae-j2450-automotive-translation-quality/",
   },
+  {
+    name: "Stepes_Automotive_Terminology_Management_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/automotive-terminology-management/",
+  },
+  {
+    name: "Stepes_ADAS_Voice_In_Vehicle_Linguistic_Testing_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/adas-voice-in-vehicle-linguistic-testing/",
+  },
 ];
 
 export default routes;
