@@ -429,6 +429,30 @@ const routes = [
     name: "Stepes_Mobile_App_Localization_Testing_Checklist_Wireframe_v3",
     path: "/resources/localization-guides/mobile-app-localization-testing-checklist/",
   },
+  {
+    name: "Stepes_Continuous_Localization_for_Mobile_Apps_Resource_Guide_Wireframe_v4",
+    path: "/resources/localization-guides/continuous-localization-for-mobile-apps/",
+  },
+  {
+    name: "Stepes_App_Localization_Cost_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/app-localization-cost-guide/",
+  },
+  {
+    name: "Stepes_Automotive_HMI_Infotainment_Localization_Guide_Wireframe_v4",
+    path: "/resources/localization-guides/automotive-hmi-infotainment-localization-guide/",
+  },
+  {
+    name: "Stepes_Automotive_Technical_Manual_Translation_Guide_Wireframe_v3",
+    path: "/resources/translation-guides/automotive-technical-manual-translation-guide/",
+  },
+  {
+    name: "stepes_automotive_ota_software_localization_guide_wireframe_v3",
+    path: "/resources/localization-guides/automotive-ota-software-localization/",
+  },
+  {
+    name: "Stepes_EV_Battery_Charging_Content_Localization_Guide_Wireframe_v3",
+    path: "/resources/localization-guides/ev-battery-charging-content-localization/",
+  },
 ];
 
 export default routes;
