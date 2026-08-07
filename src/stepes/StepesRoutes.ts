@@ -465,6 +465,14 @@ const routes = [
     name: "Stepes_ADAS_Voice_In_Vehicle_Linguistic_Testing_Guide_Wireframe_v3",
     path: "/resources/localization-guides/adas-voice-in-vehicle-linguistic-testing/",
   },
+  {
+    name: "ai-translation-human-review-wireframe-v5",
+    path: "/ai-human-translation-workflow/",
+  },
+  {
+    name: "ai-translation-review-services-wireframe-v3",
+    path: "/ai-translation-review/",
+  },
 ];
 
 export default routes;
