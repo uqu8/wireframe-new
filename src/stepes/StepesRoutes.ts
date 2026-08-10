@@ -490,12 +490,40 @@ const routes = [
     path: "/labeling-translation-services/",
   },
   {
-    name: "Stepes_Product_Label_Translation_Services_Wireframe_v3",
-    path: "/labeling-translation-services/",
+    name: "Stepes_User_Manual_Translation_Services_Wireframe_v7",
+    path: "/user-manual-translation-services/",
   },
   {
     name: "stepes_work_instruction_translation_services_wireframe_v3",
     path: "/work-instruction-translation-services/",
+  },
+  {
+    name: "Stepes_Japanese_Translation_Services_Wireframe_v3",
+    path: "/japanese-translation-services/",
+  },
+  {
+    name: "Arabic_Translation_Services_Pillar_Wireframe_v3",
+    path: "/arabic-translation-services/",
+  },
+  {
+    name: "korean_translation_services_wireframe_v4",
+    path: "/korean-translation-services/",
+  },
+  {
+    name: "Stepes_Mining_Translation_Services_Wireframe_v4",
+    path: "/mining-translation-services/",
+  },
+  {
+    name: "Stepes_Aerospace_Aviation_Translation_Services_Wireframe_v3",
+    path: "/aviation-translation-services/",
+  },
+  {
+    name: "Stepes_Banking_Translation_Services_Wireframe_v3",
+    path: "/banking-translation-services/",
+  },
+  {
+    name: "Stepes_Construction_Infrastructure_Translation_Services_Wireframe_v3",
+    path: "/construction-translation-services/",
   },
 ];
 
