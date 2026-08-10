@@ -477,6 +477,26 @@ const routes = [
     name: "Stepes_Chemical_Materials_Translation_Services_Wireframe_v3",
     path: "/chemical-translation-services/",
   },
+  {
+    name: "Stepes_SDS_Translation_Services_Wireframe_v3",
+    path: "/sds-translation-services/",
+  },
+  {
+    name: "Stepes_SOP_Translation_Services_Wireframe_v3",
+    path: "/sop-translation-services/",
+  },
+  {
+    name: "Stepes_Product_Label_Translation_Services_Wireframe_v3",
+    path: "/labeling-translation-services/",
+  },
+  {
+    name: "Stepes_Product_Label_Translation_Services_Wireframe_v3",
+    path: "/labeling-translation-services/",
+  },
+  {
+    name: "stepes_work_instruction_translation_services_wireframe_v3",
+    path: "/work-instruction-translation-services/",
+  },
 ];
 
 export default routes;
