@@ -29,6 +29,22 @@ const routes = [
       name: "Sesen_Pharmaceutical_Translation_Services_Wireframe_v3",
       path: "/pharmaceutical-translation-services/",
     },
+    {
+      name: "Sesen_eHealth_mHealth_Localization_Services_Wireframe_v4",
+      path: "/ehealth-mhealth-localization-services/",
+    },
+    {
+      name: "Sesen_Healthcare_Hospital_Translation_Services_Wireframe_v3",
+      path: "/healthcare-hospital-translation-services/",
+    },
+    {
+      name: "Sesen_Medical_Scientific_Translation_Wireframe_v3",
+      path: "/medical-scientific-translation-services/",
+    },
+    {
+      name: "Sesen_Clinical_Trial_Translation_Services_5.6_Wireframe",
+      path: "/clinical-trial-translation-services/",
+    },
   ];
   
   export default routes;
