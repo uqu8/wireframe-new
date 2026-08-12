@@ -49,6 +49,10 @@ const routes = [
       name: "Sesen_Regulatory_Translation_Services_Wireframe_v4",
       path: "/regulatory-translation-services/",
     },
+    {
+      name: "Sesen_About_Page_Wireframe_v4",
+      path: "/about-us/",
+    },
   ];
   
   export default routes;
