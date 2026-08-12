@@ -45,6 +45,10 @@ const routes = [
       name: "Sesen_Clinical_Trial_Translation_Services_5.6_Wireframe",
       path: "/clinical-trial-translation-services/",
     },
+    {
+      name: "Sesen_Regulatory_Translation_Services_Wireframe_v4",
+      path: "/regulatory-translation-services/",
+    },
   ];
   
   export default routes;
