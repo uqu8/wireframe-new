@@ -53,6 +53,10 @@ const routes = [
       name: "Sesen_About_Page_Wireframe_v4",
       path: "/about-us/",
     },
+    {
+      name: "sesen-services-hub-v3",
+      path: "/services/",
+    },
   ];
   
   export default routes;
