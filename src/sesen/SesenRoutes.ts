@@ -57,6 +57,18 @@ const routes = [
       name: "sesen-services-hub-v3",
       path: "/services/",
     },
+    {
+      name: "sesen-life-sciences-translation-services-v3",
+      path: "/life-sciences-translation-services/",
+    },
+    {
+      name: "Sesen_Medical_Device_Translation_Services_Wireframe_v4",
+      path: "/medical-device-translation-services/",
+    },
+    {
+      name: "sesen-informed-consent-form-translation-services-v5-6-wireframe-v4",
+      path: "/informed-consent-form-translation-services/",
+    },
   ];
   
   export default routes;
