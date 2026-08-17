@@ -109,6 +109,10 @@ const routes = [
     name: "sesen-ivd-translation-services-wireframe-v3",
     path: "/ivd-translation-services/",
   },
+  {
+    name: "Sesen_ISO_13485_Translation_Services_Wireframe_v3",
+    path: "/iso-13485-translation-services/",
+  },
 ];
 
 export default routes;
