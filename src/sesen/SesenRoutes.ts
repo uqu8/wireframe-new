@@ -73,6 +73,18 @@ const routes = [
     name: "Sesen_Regulatory_Submission_Translation_Services_Wireframe_v3",
     path: "/regulatory-submission-translation-services/",
   },
+  {
+    name: "Sesen_IFU_Translation_Services_Wireframe_v3",
+    path: "/ifu-translation-services/",
+  },
+  {
+    name: "Sesen_Labeling_Translation_Services_Wireframe_v1.2_20260814",
+    path: "/labeling-translation-services/",
+  },
+  {
+    name: "Sesen_eCOA_Translation_Services_Wireframe_v4",
+    path: "/ecoa-translation-services/",
+  },
 ];
 
 export default routes;
