@@ -85,6 +85,30 @@ const routes = [
     name: "Sesen_eCOA_Translation_Services_Wireframe_v4",
     path: "/ecoa-translation-services/",
   },
+  {
+    name: "Sesen_Pharmacovigilance_Translation_Services_5_6_Wireframe_v4",
+    path: "/pharmacovigilance-translation-services/",
+  },
+  {
+    name: "Sesen_Clinical_Medical_Software_Localization_Wireframe_v3",
+    path: "/clinical-medical-software-localization-services/",
+  },
+  {
+    name: "Sesen_Certified_Medical_Device_Translation_Services_Wireframe_v3",
+    path: "/certified-medical-device-translation-services/",
+  },
+  {
+    name: "Sesen_Multimedia_Localization_Wireframe_v4",
+    path: "/multimedia-translation-services/",
+  },
+  {
+    name: "sesen-biopharmaceutical-biosimilar-translation-services-wireframe-v3",
+    path: "/biopharmaceutical-biosimilar-translation-services/",
+  },
+  {
+    name: "sesen-ivd-translation-services-wireframe-v3",
+    path: "/ivd-translation-services/",
+  },
 ];
 
 export default routes;
