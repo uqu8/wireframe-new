@@ -121,6 +121,10 @@ const routes = [
     name: "Sesen_eLearning_Training_Translation_Services_Wireframe_v4",
     path: "/elearning-training-translation-services/",
   },
+  {
+    name: "sesen-voiceover-services-wireframe-v3",
+    path: "/voiceover-services/",
+  },
 ];
 
 export default routes;
