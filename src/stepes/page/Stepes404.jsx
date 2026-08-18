@@ -1,6 +1,111 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function stepes404() {
+export default function Stepes404() {
+  const [consoleErrors, setConsoleErrors] = useState([]);
+  const [errorCount, setErrorCount] = useState(0);
+
+  useEffect(() => {
+    // 保存原始的 console 方法
+    const originalConsoleError = console.error;
+    const originalConsoleWarn = console.warn;
+    const originalConsoleLog = console.log;
+    const originalConsoleInfo = console.info;
+
+    // 存储所有错误信息
+    const errors = [];
+
+    // 通用的错误处理函数
+    const handleConsoleMessage = (args, type) => {
+      const message = args
+        .map((arg) => {
+          if (arg instanceof Error) {
+            return `${arg.name}: ${arg.message}`;
+          }
+          if (typeof arg === "object" && arg !== null) {
+            try {
+              return JSON.stringify(arg);
+            } catch {
+              return String(arg);
+            }
+          }
+          return String(arg);
+        })
+        .join(" ");
+
+      // 过滤掉一些常见的不重要信息
+      if (message.includes("Download the React DevTools")) {
+        return;
+      }
+
+      // 提取关键错误信息
+      let displayMessage = message;
+
+      // 检测是否是网络错误
+      if (message.includes("ERR_BLOCKED_BY_RESPONSE")) {
+        displayMessage =
+          "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin";
+      } else if (message.includes("404")) {
+        const urlMatch = message.match(/https?:\/\/[^\s"']+/);
+        if (urlMatch) {
+          displayMessage = `GET ${urlMatch[0]} 404 (Not Found)`;
+        }
+      } else if (
+        message.includes("TypeError") ||
+        message.includes("ReferenceError") ||
+        message.includes("SyntaxError")
+      ) {
+        // 保留完整的错误信息
+        displayMessage = message;
+      }
+
+      const errorObj = {
+        message: displayMessage,
+        timestamp: new Date().toLocaleTimeString(),
+        type: type,
+      };
+
+      errors.push(errorObj);
+
+      // 更新状态，显示最新的8条错误
+      const latestErrors = errors.slice(-8);
+      setConsoleErrors(latestErrors);
+      setErrorCount(errors.filter((e) => e.type === "error").length);
+    };
+
+    // 重写 console.error
+    console.error = function (...args) {
+      originalConsoleError.apply(console, args);
+      handleConsoleMessage(args, "error");
+    };
+
+    // 重写 console.warn
+    console.warn = function (...args) {
+      originalConsoleWarn.apply(console, args);
+      handleConsoleMessage(args, "warn");
+    };
+
+    // 模拟真实的浏览器错误（这些会在实际错误发生时被真实错误替换）
+    const timer = setTimeout(() => {
+      // 触发一个示例错误，模拟真实场景
+      // 实际使用中，这些会由真实的页面错误触发
+      if (consoleErrors.length === 0) {
+        // 只在没有其他错误时显示示例
+        console.error(
+          "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin"
+        );
+      }
+    }, 300);
+
+    // 清理函数：恢复原始的 console 方法
+    return () => {
+      console.error = originalConsoleError;
+      console.warn = originalConsoleWarn;
+      console.log = originalConsoleLog;
+      console.info = originalConsoleInfo;
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="stepes-404-page">
       <style>{`
@@ -111,16 +216,13 @@ export default function stepes404() {
           line-height: 1.75;
         }
 
-        .stepes-404-error {
+        /* Console 风格的错误信息容器 */
+        .stepes-404-error-container {
           max-width: 720px;
           margin: 32px auto 0;
-          padding: 16px 20px;
-          border: 1px solid rgba(190, 30, 103, 0.14);
-          border-radius: 14px;
-          background: rgba(255, 255, 255, 0.72);
-          box-shadow:
-            0 10px 35px rgba(0, 0, 0, 0.04),
-            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+          border-radius: 12px;
+          background: #1e1e1e;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
           font-family:
             ui-monospace,
             SFMono-Regular,
@@ -130,15 +232,163 @@ export default function stepes404() {
             monospace;
           font-size: 13px;
           line-height: 1.6;
-          color: #777;
+          color: #d4d4d4;
           word-break: break-word;
+          text-align: left;
+          overflow: hidden;
+          border: 1px solid #333;
         }
 
-        .stepes-404-error strong {
-          color: #bd1e67;
-          font-weight: 600;
+        .stepes-404-error-header {
+          display: flex;
+          align-items: center;
+          padding: 10px 16px;
+          background: #2d2d2d;
+          border-bottom: 1px solid #3d3d3d;
+          font-size: 12px;
+          color: #858585;
+          cursor: default;
         }
 
+        .stepes-404-error-dots {
+          display: flex;
+          gap: 6px;
+          margin-right: 12px;
+        }
+
+        .stepes-404-error-dot {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+
+        .stepes-404-error-dot-red {
+          background: #f44336;
+        }
+
+        .stepes-404-error-dot-yellow {
+          background: #ff9800;
+        }
+
+        .stepes-404-error-dot-green {
+          background: #4caf50;
+        }
+
+        .stepes-404-error-title {
+          font-weight: 500;
+          color: #aaa;
+        }
+
+        .stepes-404-error-badge {
+          margin-left: auto;
+          padding: 2px 12px;
+          background: #3d3d3d;
+          border-radius: 12px;
+          font-size: 11px;
+          color: #aaa;
+        }
+
+        .stepes-404-error-badge.has-errors {
+          background: #5c2a2a;
+          color: #ff6b6b;
+        }
+
+        .stepes-404-error-body {
+          padding: 8px 16px;
+          max-height: 220px;
+          overflow-y: auto;
+          background: #1e1e1e;
+        }
+
+        .stepes-404-error-body::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .stepes-404-error-body::-webkit-scrollbar-track {
+          background: #1e1e1e;
+        }
+
+        .stepes-404-error-body::-webkit-scrollbar-thumb {
+          background: #3d3d3d;
+          border-radius: 4px;
+        }
+
+        .stepes-404-error-body::-webkit-scrollbar-thumb:hover {
+          background: #4d4d4d;
+        }
+
+        .stepes-404-error-item {
+          padding: 6px 0;
+          border-bottom: 1px solid #2a2a2a;
+          font-size: 12px;
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        .stepes-404-error-item:last-child {
+          border-bottom: none;
+        }
+
+        .stepes-404-error-icon {
+          flex-shrink: 0;
+          margin-top: 1px;
+          font-size: 13px;
+        }
+
+        .stepes-404-error-icon.error {
+          color: #f44336;
+        }
+
+        .stepes-404-error-icon.warn {
+          color: #ffa726;
+        }
+
+        .stepes-404-error-content {
+          flex: 1;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 4px 8px;
+        }
+
+        .stepes-404-error-message {
+          color: #d4d4d4;
+          word-break: break-all;
+        }
+
+        .stepes-404-error-message .error-highlight {
+          color: #ff6b6b;
+          font-weight: 500;
+        }
+
+        .stepes-404-error-timestamp {
+          color: #6a6a6a;
+          font-size: 10px;
+          flex-shrink: 0;
+        }
+
+        .stepes-404-error-empty {
+          color: #6a6a6a;
+          font-style: italic;
+          padding: 16px 0;
+          text-align: center;
+          font-size: 13px;
+        }
+
+        .stepes-404-error-empty .console-icon {
+          display: block;
+          font-size: 28px;
+          margin-bottom: 8px;
+          opacity: 0.6;
+        }
+
+        .stepes-404-error-empty .checkmark {
+          color: #4caf50;
+        }
+
+        /* 保留原有按钮样式 */
         .stepes-404-actions {
           display: flex;
           justify-content: center;
@@ -212,9 +462,18 @@ export default function stepes404() {
             font-size: 15px;
           }
 
-          .stepes-404-error {
+          .stepes-404-error-container {
             font-size: 11px;
-            text-align: left;
+          }
+
+          .stepes-404-error-body {
+            max-height: 150px;
+            padding: 6px 12px;
+          }
+
+          .stepes-404-error-item {
+            font-size: 11px;
+            padding: 4px 0;
           }
 
           .stepes-404-button {
@@ -239,9 +498,49 @@ export default function stepes404() {
           may have been moved, removed, or is currently unavailable.
         </p>
 
-        <div className="stepes-404-error">
-          <strong>Error:</strong> Failed to load resource:{" "}
-          net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin
+        {/* Console 风格的错误信息 - 显示真实的控制台错误 */}
+        <div className="stepes-404-error-container">
+          <div className="stepes-404-error-header">
+            <div className="stepes-404-error-dots">
+              <span className="stepes-404-error-dot stepes-404-error-dot-red"></span>
+              <span className="stepes-404-error-dot stepes-404-error-dot-yellow"></span>
+              <span className="stepes-404-error-dot stepes-404-error-dot-green"></span>
+            </div>
+            <span className="stepes-404-error-title">Console</span>
+            <span
+              className={`stepes-404-error-badge ${
+                errorCount > 0 ? "has-errors" : ""
+              }`}
+            >
+              {errorCount > 0
+                ? `${errorCount} error${errorCount > 1 ? "s" : ""}`
+                : "No errors"}
+            </span>
+          </div>
+          <div className="stepes-404-error-body">
+            {consoleErrors.length === 0 ? (
+              <div className="stepes-404-error-empty">
+                <span className="console-icon checkmark">✓</span>
+                No console errors detected
+              </div>
+            ) : (
+              consoleErrors.map((error, index) => (
+                <div key={index} className="stepes-404-error-item">
+                  <span className={`stepes-404-error-icon ${error.type}`}>
+                    {error.type === "error" ? "✖" : "⚠"}
+                  </span>
+                  <div className="stepes-404-error-content">
+                    <span className="stepes-404-error-message">
+                      {error.message}
+                    </span>
+                    <span className="stepes-404-error-timestamp">
+                      {error.timestamp}
+                    </span>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
         </div>
 
         <div className="stepes-404-actions">
