@@ -1,20 +1,19 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import StepesLayout from "./sesen/Layout/SesenLayout";
+import SesenLayout from "./sesen/Layout/SesenLayout";
 import routeConfig from "./sesen/SesenRoutes";
 
-// 自动扫描 page 下所有 tsx/jsx
 const pages = {
   ...import.meta.glob("./sesen/page/*.tsx"),
   ...import.meta.glob("./sesen/page/*.jsx"),
 };
 
 const routes = routeConfig
+  .filter(({ path }) => path !== "*")
   .map(({ name, path }) => {
     const importer =
-      pages[`./sesen/page/${name}.tsx`] ??
-      pages[`./sesen/page/${name}.jsx`];
+      pages[`./sesen/page/${name}.tsx`] ?? pages[`./sesen/page/${name}.jsx`];
 
     if (!importer) {
       console.warn(`找不到页面：${name}`);
@@ -28,16 +27,18 @@ const routes = routeConfig
   })
   .filter(Boolean);
 
-export default function StepesRoutes() {
+const NotFound = lazy(() => import("./sesen/page/Sesen404"));
+
+export default function SesenRoutes() {
   return (
     <Suspense
       fallback={
         <div
           style={{
+            minHeight: "100vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "100vh",
           }}
         >
           Loading...
@@ -45,7 +46,8 @@ export default function StepesRoutes() {
       }
     >
       <Routes>
-        <Route element={<StepesLayout />}>
+        {/* 正常页面：使用 Header + Footer */}
+        <Route element={<SesenLayout />}>
           {routes.map((route: any) => (
             <Route
               key={route.path}
@@ -54,6 +56,9 @@ export default function StepesRoutes() {
             />
           ))}
         </Route>
+
+        {/* 404：完全独立，不使用 Header / Footer */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );

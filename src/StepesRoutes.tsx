@@ -4,17 +4,16 @@ import { Routes, Route } from "react-router-dom";
 import StepesLayout from "./stepes/Layout/StepesLayout";
 import routeConfig from "./stepes/StepesRoutes";
 
-// 自动扫描 page 下所有 tsx/jsx
 const pages = {
   ...import.meta.glob("./stepes/page/*.tsx"),
   ...import.meta.glob("./stepes/page/*.jsx"),
 };
 
 const routes = routeConfig
+  .filter(({ path }) => path !== "*")
   .map(({ name, path }) => {
     const importer =
-      pages[`./stepes/page/${name}.tsx`] ??
-      pages[`./stepes/page/${name}.jsx`];
+      pages[`./stepes/page/${name}.tsx`] ?? pages[`./stepes/page/${name}.jsx`];
 
     if (!importer) {
       console.warn(`找不到页面：${name}`);
@@ -28,16 +27,18 @@ const routes = routeConfig
   })
   .filter(Boolean);
 
+const NotFound = lazy(() => import("./stepes/page/Stepes404"));
+
 export default function StepesRoutes() {
   return (
     <Suspense
       fallback={
         <div
           style={{
+            minHeight: "100vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "100vh",
           }}
         >
           Loading...
@@ -45,6 +46,7 @@ export default function StepesRoutes() {
       }
     >
       <Routes>
+        {/* 正常页面：使用 Header + Footer */}
         <Route element={<StepesLayout />}>
           {routes.map((route: any) => (
             <Route
@@ -54,6 +56,9 @@ export default function StepesRoutes() {
             />
           ))}
         </Route>
+
+        {/* 404：完全独立，不使用 Header / Footer */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );

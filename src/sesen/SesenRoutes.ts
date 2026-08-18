@@ -125,6 +125,10 @@ const routes = [
     name: "sesen-voiceover-services-wireframe-v3",
     path: "/voiceover-services/",
   },
+  {
+    name: "Sesen_CRF_Translation_Services_Wireframe_v3",
+    path: "/clinical-trial-translation-services/crf-translations/",
+  },
 ];
 
 export default routes;
