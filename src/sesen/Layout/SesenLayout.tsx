@@ -1,12 +1,7 @@
 import React, { useMemo } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-<<<<<<< HEAD
 import Header from "../header/sesen_header_wireframe"; // 导入 Header
 import Footer from "../footer/sesen_footer_wireframe";
-=======
-import Footer from "../footer/sesen_footer_wireframe";
-import Header from "../header/sesen_header_wireframe"; // 导入 Header
->>>>>>> 2018021dfe8960f4501ab30c1bcc788af45ca5e4
 import "../css/SesenLayout.css";
 
 export default function StepesLayout() {

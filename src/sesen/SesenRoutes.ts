@@ -117,6 +117,10 @@ const routes = [
     name: "sesen-medical-device-labeling-translation-services-wireframe-v3",
     path: "/medical-device-labeling-translation-services/",
   },
+  {
+    name: "Sesen_eLearning_Training_Translation_Services_Wireframe_v4",
+    path: "/elearning-training-translation-services/",
+  },
 ];
 
 export default routes;
