@@ -113,6 +113,10 @@ const routes = [
     name: "Sesen_ISO_13485_Translation_Services_Wireframe_v3",
     path: "/iso-13485-translation-services/",
   },
+  {
+    name: "sesen-medical-device-labeling-translation-services-wireframe-v3",
+    path: "/medical-device-labeling-translation-services/",
+  },
 ];
 
 export default routes;
