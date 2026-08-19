@@ -4,12 +4,12 @@ import Header from "../header/sesen_header_wireframe"; // 导入 Header
 import Footer from "../footer/sesen_footer_wireframe";
 import "../css/SesenLayout.css";
 
-export default function StepesLayout() {
+export default function sesenLayout() {
   const location = useLocation();
 
   const hideFooterPaths = useMemo(
     () => [
-      "/stepes/some-page-without-footer",
+      "/sesen/some-page-without-footer",
       // 在这里添加不需要显示 Footer 的页面路径
     ],
     []
@@ -17,7 +17,7 @@ export default function StepesLayout() {
 
   const hideHeaderPaths = useMemo(
     () => [
-      "/stepes/some-page-without-header",
+      "/sesen/some-page-without-header",
       // 在这里添加不需要显示 Header 的页面路径
     ],
     []
@@ -27,9 +27,9 @@ export default function StepesLayout() {
   const showHeader = !hideHeaderPaths.includes(location.pathname);
 
   return (
-    <div className="stepes-layout">
+    <div className="sesen-layout">
       {showHeader && <Header />}
-      <main className="stepes-content">
+      <main className="sesen-content">
         <Outlet />
       </main>
       {showFooter && <Footer />}

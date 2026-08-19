@@ -129,6 +129,10 @@ const routes = [
     name: "Sesen_CRF_Translation_Services_Wireframe_v3",
     path: "/clinical-trial-translation-services/crf-translations/",
   },
+  {
+    name: "sesen-sop-translation-services-wireframe-v3",
+    path: "/sop-translation-services/",
+  },
 ];
 
 export default routes;
