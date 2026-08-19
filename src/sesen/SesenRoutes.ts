@@ -133,6 +133,22 @@ const routes = [
     name: "sesen-sop-translation-services-wireframe-v3",
     path: "/sop-translation-services/",
   },
+  {
+    name: "Sesen_SmPC_Translation_Services_Wireframe_v3",
+    path: "/smpc-translation-services/",
+  },
+  {
+    name: "Sesen_Patient_Information_Leaflet_Translation_Services_Wireframe_v3",
+    path: "/patient-information-leaflet-translation-services/",
+  },
+  {
+    name: "sesen-irb-ethics-committee-translation-services-wireframe-v3",
+    path: "/irb-ethics-committee-translation-services/",
+  },
+  {
+    name: "sesen-quality-assurance-audit-translation-wireframe-v3",
+    path: "/quality-assurance-audit-translation/",
+  },
 ];
 
 export default routes;
