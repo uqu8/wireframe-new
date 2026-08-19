@@ -149,6 +149,10 @@ const routes = [
     name: "sesen-quality-assurance-audit-translation-wireframe-v3",
     path: "/quality-assurance-audit-translation/",
   },
+  {
+    name: "Sesen_Protocol_Translation_Services_Wireframe_v3",
+    path: "/protocol-translation-services/",
+  },
 ];
 
 export default routes;
