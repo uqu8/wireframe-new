@@ -165,6 +165,10 @@ const routes = [
     name: "Sesen_CTD_eCTD_Translation_Services_Wireframe_v3",
     path: "/ectd-ctd-translation-services/",
   },
+  {
+    name: "Sesen_CMC_Document_Translation_Services_Wireframe_v3",
+    path: "/cmc-document-translation-services/",
+  },
 ];
 
 export default routes;
