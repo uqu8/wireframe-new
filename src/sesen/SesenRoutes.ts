@@ -157,6 +157,10 @@ const routes = [
     name: "sesen-investigators-brochure-translation-wireframe-v3",
     path: "/investigators-brochure-translation-services/",
   },
+  {
+    name: "sesen-clinical-study-document-translation-wireframe-v3",
+    path: "/clinical-study-translation-services/",
+  },
 ];
 
 export default routes;
