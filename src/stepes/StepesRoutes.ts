@@ -525,6 +525,10 @@ const routes = [
     name: "Stepes_Construction_Infrastructure_Translation_Services_Wireframe_v3",
     path: "/construction-translation-services/",
   },
+  {
+    name: "Stepes_Technical_Translation_Services_Wireframe_Codex56_v5",
+    path: "/technical-translation-services/",
+  },
 ];
 
 export default routes;
