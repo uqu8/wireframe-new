@@ -181,6 +181,14 @@ const routes = [
     name: "Sesen_Oncology_Translation_Services_Wireframe_v1.2",
     path: "/oncology-translation-services/",
   },
+  {
+    name: "Sesen_Rare_Disease_Translation_Services_Wireframe_v1.2_20260822",
+    path: "/rare-disease-translation-services/",
+  },
+  {
+    name: "Sesen_Cell_Gene_Therapy_Translation_Services_Wireframe_v4",
+    path: "/cell-gene-therapy-translation-services/",
+  },
 ];
 
 export default routes;
