@@ -529,6 +529,10 @@ const routes = [
     name: "Stepes_Technical_Translation_Services_Wireframe_Codex56_v5",
     path: "/technical-translation-services/",
   },
+  {
+    name: "stepes-robotics-translation-services-wireframe-v6-icons",
+    path: "/robotics-translation-services/",
+  },
 ];
 
 export default routes;
