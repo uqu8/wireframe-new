@@ -177,6 +177,10 @@ const routes = [
     name: "Sesen_Clinical_Trial_Results_Plain_Language_Summary_Translation_Wireframe_v5",
     path: "/clinical-trial-results-plain-language-summary-translation/",
   },
+  {
+    name: "Sesen_Oncology_Translation_Services_Wireframe_v1.2",
+    path: "/oncology-translation-services/",
+  },
 ];
 
 export default routes;
