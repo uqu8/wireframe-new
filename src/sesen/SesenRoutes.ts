@@ -189,6 +189,18 @@ const routes = [
     name: "Sesen_Cell_Gene_Therapy_Translation_Services_Wireframe_v4",
     path: "/cell-gene-therapy-translation-services/",
   },
+  {
+    name: "Sesen_Class_III_IFU_Case_Study_Wireframe_v5_Type_Scale_Polish_20260823",
+    path: "/resources/case-studies/ifu-localization-class-iii-medical-device/",
+  },
+  {
+    name: "Sesen_mRNA_RNA_Therapeutics_Wireframe_v1.2",
+    path: "/mrna-rna-therapeutics-translation-services/",
+  },
+  {
+    name: "Sesen_Immunology_Autoimmune_Translation_Services_Wireframe_v3",
+    path: "/immunology-autoimmune-translation-services/",
+  },
 ];
 
 export default routes;
