@@ -201,6 +201,10 @@ const routes = [
     name: "Sesen_Immunology_Autoimmune_Translation_Services_Wireframe_v3",
     path: "/immunology-autoimmune-translation-services/",
   },
+  {
+    name: "Sesen_Neurology_CNS_Translation_Services_Wireframe_v3",
+    path: "/neurology-cns-translation-services/",
+  },
 ];
 
 export default routes;
