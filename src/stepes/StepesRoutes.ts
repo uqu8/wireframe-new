@@ -537,6 +537,10 @@ const routes = [
     name: "Stepes_Engineering_Translation_Services_Wireframe_v1.2_20260824",
     path: "/engineering-translation-services/",
   },
+  {
+    name: "stepes-transportation-translation-services-wireframe-v12",
+    path: "/transportation-translation-services/",
+  },
 ];
 
 export default routes;
