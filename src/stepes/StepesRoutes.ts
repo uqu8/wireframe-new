@@ -549,6 +549,10 @@ const routes = [
     name: "Stepes_Agriculture_Translation_Services_Wireframe_v6",
     path: "/agriculture-translation-services/",
   },
+  {
+    name: "Stepes_Food_Beverage_Translation_Services_Wireframe_v5",
+    path: "/food-beverage-translation-services/",
+  },
 ];
 
 export default routes;
