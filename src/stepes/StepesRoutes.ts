@@ -541,6 +541,14 @@ const routes = [
     name: "stepes-transportation-translation-services-wireframe-v12",
     path: "/transportation-translation-services/",
   },
+  {
+    name: "Stepes_Education_Translation_Services_Wireframe_v3",
+    path: "/education-translation-services/",
+  },
+  {
+    name: "Stepes_Agriculture_Translation_Services_Wireframe_v6",
+    path: "/agriculture-translation-services/",
+  },
 ];
 
 export default routes;
