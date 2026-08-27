@@ -557,6 +557,10 @@ const routes = [
     name: "Stepes_Document_Translation_Services_5_6_Wireframe_v2",
     path: "/document-translation-services/",
   },
+  {
+    name: "stepes-video-translation-services-5-6-wireframe-v5",
+    path: "/video-translation-services/",
+  },
 ];
 
 export default routes;
