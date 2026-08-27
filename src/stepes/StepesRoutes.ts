@@ -553,6 +553,10 @@ const routes = [
     name: "Stepes_Food_Beverage_Translation_Services_Wireframe_v5",
     path: "/food-beverage-translation-services/",
   },
+  {
+    name: "Stepes_Document_Translation_Services_5_6_Wireframe_v2",
+    path: "/document-translation-services/",
+  },
 ];
 
 export default routes;
