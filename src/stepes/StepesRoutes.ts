@@ -561,6 +561,10 @@ const routes = [
     name: "stepes-video-translation-services-5-6-wireframe-v5",
     path: "/video-translation-services/",
   },
+  {
+    name: "Stepes_Marketing_Translation_Services_5.6_Wireframe_v5_20260828",
+    path: "/marketing-translation-services/",
+  },
 ];
 
 export default routes;
