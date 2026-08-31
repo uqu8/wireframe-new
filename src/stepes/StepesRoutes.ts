@@ -585,6 +585,14 @@ const routes = [
     name: "Stepes_Oil_Gas_Translation_Services_5.6_Wireframe_v3_20260829",
     path: "/oil-gas-translation-services/",
   },
+  {
+    name: "Stepes_Contract_Translation_Services_5.6_Wireframe_v4_20260830",
+    path: "/contract-translation-services/",
+  },
+  {
+    name: "Stepes_Certified_Translation_Services_5.6_Wireframe_20260830_v3",
+    path: "/certified-translation-services/",
+  },
 ];
 
 export default routes;
