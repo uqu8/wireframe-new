@@ -565,6 +565,26 @@ const routes = [
     name: "Stepes_Marketing_Translation_Services_5.6_Wireframe_v5_20260828",
     path: "/marketing-translation-services/",
   },
+  {
+    name: "Stepes_Professional_Services_Translation_Wireframe_v3",
+    path: "/professional-services-translation/",
+  },
+  {
+    name: "Stepes_Ecommerce_Translations_5.6_Wireframe_Polished_20260829",
+    path: "/ecommerce-translations/",
+  },
+  {
+    name: "Stepes_Pharmaceutical_Translation_Services_5.6_Wireframe_v3_20260829 (1)",
+    path: "/pharmaceutical-translation-services/",
+  },
+  {
+    name: "Stepes_Pharmaceutical_Translation_Services_5.6_Wireframe_v3_20260829 (1)",
+    path: "/pharmaceutical-translation-services/",
+  },
+  {
+    name: "Stepes_Oil_Gas_Translation_Services_5.6_Wireframe_v3_20260829",
+    path: "/oil-gas-translation-services/",
+  },
 ];
 
 export default routes;
