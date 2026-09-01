@@ -593,6 +593,10 @@ const routes = [
     name: "Stepes_Certified_Translation_Services_5.6_Wireframe_20260830_v3",
     path: "/certified-translation-services/",
   },
+  {
+    name: "Stepes_Accessibility_React_Wireframe_v4_20260831",
+    path: "/accessibility/",
+  },
 ];
 
 export default routes;
