@@ -597,6 +597,10 @@ const routes = [
     name: "Stepes_Accessibility_React_Wireframe_v4_20260831",
     path: "/accessibility/",
   },
+  {
+    name: "Stepes_Sitemap_5.6_Wireframe_20260831_v3",
+    path: "/sitemap/",
+  },
 ];
 
 export default routes;
