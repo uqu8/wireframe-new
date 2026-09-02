@@ -601,6 +601,14 @@ const routes = [
     name: "Stepes_Sitemap_5.6_Wireframe_20260831_v3",
     path: "/sitemap/",
   },
+  {
+    name: "Stepes_Continuous_Translation_5.6_Wireframe_v3.jsx",
+    path: "/continuous-translation/",
+  },
+  {
+    name: "Stepes_Biotechnology_Translation_Services_Wireframe_v3_20260901.jsx",
+    path: "/biotechnology-translation-services/",
+  },
 ];
 
 export default routes;
