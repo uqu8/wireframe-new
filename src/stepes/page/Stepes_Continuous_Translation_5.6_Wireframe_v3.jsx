@@ -24,7 +24,8 @@ const LINKS = {
   workflow: "https://www.stepes.com/translation-workflow-automation/",
   ai: "https://www.stepes.com/ai-translation-services/",
   aiHuman: "https://www.stepes.com/ai-human-translation-workflow/",
-  aiWorkflows: "https://www.stepes.com/solutions/ai-powered-translation-workflows/",
+  aiWorkflows:
+    "https://www.stepes.com/solutions/ai-powered-translation-workflows/",
   tm: "https://www.stepes.com/translation-memory/",
   terminology: "https://www.stepes.com/terminology-management/",
   globalOps: "https://www.stepes.com/solutions/global-content-operations/",
@@ -34,79 +35,277 @@ const LINKS = {
   marketing: "https://www.stepes.com/marketing-translation-services/",
   technical: "https://www.stepes.com/technical-translation-services/",
   support: "https://www.stepes.com/solutions/multilingual-customer-support/",
-  continuousGuide: "https://www.stepes.com/resources/localization-guides/continuous-localization-for-mobile-apps/",
+  continuousGuide:
+    "https://www.stepes.com/resources/localization-guides/continuous-localization-for-mobile-apps/",
 };
 
 function ArrowIcon({ size = 17 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M5 12h13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="m14 7 5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M5 12h13"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+      <path
+        d="m14 7 5 5-5 5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function CheckIcon({ size = 20 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="m5 12.5 4.1 4.1L19 6.7" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="m5 12.5 4.1 4.1L19 6.7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function NeutralMarker({ size = 18 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
-      <path d="M8.5 12h7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="7.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M8.5 12h7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 
 function ChevronIcon({ open }) {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" className={open ? "chevron open" : "chevron"}>
-      <path d="m7 9.5 5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      className={open ? "chevron open" : "chevron"}
+    >
+      <path
+        d="m7 9.5 5 5 5-5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function Icon({ name, size = 22 }) {
-  const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.7, strokeLinecap: "round", strokeLinejoin: "round" };
-  const paths = {
-    globe: <><circle cx="12" cy="12" r="8" {...common}/><path d="M4 12h16M12 4c2.4 2.2 3.7 4.9 3.7 8S14.4 17.8 12 20c-2.4-2.2-3.7-4.9-3.7-8S9.6 6.2 12 4Z" {...common}/></>,
-    spark: <><path d="M12 3l1.2 4.1L17 8.3l-3.8 1.2L12 14l-1.2-4.5L7 8.3l3.8-1.2L12 3Z" {...common}/><path d="M18.5 14.5l.7 2.2 2.3.8-2.3.7-.7 2.3-.8-2.3-2.2-.7 2.2-.8.8-2.2Z" {...common}/></>,
-    flow: <><path d="M4 7h9a3 3 0 0 1 3 3v7" {...common}/><path d="m13 4 3 3-3 3M13 17h7M17 14l3 3-3 3" {...common}/></>,
-    shield: <><path d="M12 3.5 19 6v5.5c0 4.5-2.7 7.3-7 9-4.3-1.7-7-4.5-7-9V6l7-2.5Z" {...common}/><path d="m8.8 12 2 2 4.5-5" {...common}/></>,
-    code: <><path d="m8 7-4 5 4 5M16 7l4 5-4 5M14 4l-4 16" {...common}/></>,
-    cms: <><rect x="4" y="4" width="16" height="16" rx="2" {...common}/><path d="M4 8h16M8 4v4M8 12h8M8 16h5" {...common}/></>,
-    cart: <><path d="M4 5h2l2.2 9h8.8l2-6H7.2" {...common}/><circle cx="10" cy="18" r="1" {...common}/><circle cx="17" cy="18" r="1" {...common}/></>,
-    book: <><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H12v17H7.5A3.5 3.5 0 0 0 4 22V5.5Z" {...common}/><path d="M20 5.5A3.5 3.5 0 0 0 16.5 2H12v17h4.5A3.5 3.5 0 0 1 20 22V5.5Z" {...common}/></>,
-    message: <><path d="M4 5h16v11H9l-5 4V5Z" {...common}/><path d="M8 9h8M8 12h5" {...common}/></>,
-    document: <><path d="M7 3h7l4 4v14H7V3Z" {...common}/><path d="M14 3v5h5M10 12h5M10 16h5" {...common}/></>,
-    layers: <><path d="m12 3 8 4-8 4-8-4 8-4Z" {...common}/><path d="m4 12 8 4 8-4M4 17l8 4 8-4" {...common}/></>,
-    memory: <><rect x="5" y="5" width="14" height="14" rx="3" {...common}/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" {...common}/></>,
-    term: <><path d="M5 5h14M8 5v14M16 5v14M5 19h14" {...common}/><path d="M10.5 12h3" {...common}/></>,
-    review: <><path d="M5 4h10l4 4v12H5V4Z" {...common}/><path d="M15 4v5h5M8 13l2 2 4-4" {...common}/></>,
-    context: <><circle cx="11" cy="11" r="6" {...common}/><path d="m16 16 4 4M8 11h6M11 8v6" {...common}/></>,
-    market: <><path d="M12 21s6-5.5 6-11a6 6 0 1 0-12 0c0 5.5 6 11 6 11Z" {...common}/><circle cx="12" cy="10" r="2" {...common}/></>,
-    bolt: <><path d="M13 2 5 13h6l-1 9 9-12h-6V2Z" {...common}/></>,
+  const common = {
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
   };
-  return <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">{paths[name] || paths.flow}</svg>;
+  const paths = {
+    globe: (
+      <>
+        <circle cx="12" cy="12" r="8" {...common} />
+        <path
+          d="M4 12h16M12 4c2.4 2.2 3.7 4.9 3.7 8S14.4 17.8 12 20c-2.4-2.2-3.7-4.9-3.7-8S9.6 6.2 12 4Z"
+          {...common}
+        />
+      </>
+    ),
+    spark: (
+      <>
+        <path
+          d="M12 3l1.2 4.1L17 8.3l-3.8 1.2L12 14l-1.2-4.5L7 8.3l3.8-1.2L12 3Z"
+          {...common}
+        />
+        <path
+          d="M18.5 14.5l.7 2.2 2.3.8-2.3.7-.7 2.3-.8-2.3-2.2-.7 2.2-.8.8-2.2Z"
+          {...common}
+        />
+      </>
+    ),
+    flow: (
+      <>
+        <path d="M4 7h9a3 3 0 0 1 3 3v7" {...common} />
+        <path d="m13 4 3 3-3 3M13 17h7M17 14l3 3-3 3" {...common} />
+      </>
+    ),
+    shield: (
+      <>
+        <path
+          d="M12 3.5 19 6v5.5c0 4.5-2.7 7.3-7 9-4.3-1.7-7-4.5-7-9V6l7-2.5Z"
+          {...common}
+        />
+        <path d="m8.8 12 2 2 4.5-5" {...common} />
+      </>
+    ),
+    code: (
+      <>
+        <path d="m8 7-4 5 4 5M16 7l4 5-4 5M14 4l-4 16" {...common} />
+      </>
+    ),
+    cms: (
+      <>
+        <rect x="4" y="4" width="16" height="16" rx="2" {...common} />
+        <path d="M4 8h16M8 4v4M8 12h8M8 16h5" {...common} />
+      </>
+    ),
+    cart: (
+      <>
+        <path d="M4 5h2l2.2 9h8.8l2-6H7.2" {...common} />
+        <circle cx="10" cy="18" r="1" {...common} />
+        <circle cx="17" cy="18" r="1" {...common} />
+      </>
+    ),
+    book: (
+      <>
+        <path
+          d="M4 5.5A3.5 3.5 0 0 1 7.5 2H12v17H7.5A3.5 3.5 0 0 0 4 22V5.5Z"
+          {...common}
+        />
+        <path
+          d="M20 5.5A3.5 3.5 0 0 0 16.5 2H12v17h4.5A3.5 3.5 0 0 1 20 22V5.5Z"
+          {...common}
+        />
+      </>
+    ),
+    message: (
+      <>
+        <path d="M4 5h16v11H9l-5 4V5Z" {...common} />
+        <path d="M8 9h8M8 12h5" {...common} />
+      </>
+    ),
+    document: (
+      <>
+        <path d="M7 3h7l4 4v14H7V3Z" {...common} />
+        <path d="M14 3v5h5M10 12h5M10 16h5" {...common} />
+      </>
+    ),
+    layers: (
+      <>
+        <path d="m12 3 8 4-8 4-8-4 8-4Z" {...common} />
+        <path d="m4 12 8 4 8-4M4 17l8 4 8-4" {...common} />
+      </>
+    ),
+    memory: (
+      <>
+        <rect x="5" y="5" width="14" height="14" rx="3" {...common} />
+        <path
+          d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"
+          {...common}
+        />
+      </>
+    ),
+    term: (
+      <>
+        <path d="M5 5h14M8 5v14M16 5v14M5 19h14" {...common} />
+        <path d="M10.5 12h3" {...common} />
+      </>
+    ),
+    review: (
+      <>
+        <path d="M5 4h10l4 4v12H5V4Z" {...common} />
+        <path d="M15 4v5h5M8 13l2 2 4-4" {...common} />
+      </>
+    ),
+    context: (
+      <>
+        <circle cx="11" cy="11" r="6" {...common} />
+        <path d="m16 16 4 4M8 11h6M11 8v6" {...common} />
+      </>
+    ),
+    market: (
+      <>
+        <path
+          d="M12 21s6-5.5 6-11a6 6 0 1 0-12 0c0 5.5 6 11 6 11Z"
+          {...common}
+        />
+        <circle cx="12" cy="10" r="2" {...common} />
+      </>
+    ),
+    bolt: (
+      <>
+        <path d="M13 2 5 13h6l-1 9 9-12h-6V2Z" {...common} />
+      </>
+    ),
+  };
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {paths[name] || paths.flow}
+    </svg>
+  );
 }
 
 function PrimaryButton({ href, children, dark = false }) {
   return (
-    <a className={dark ? "btn primary dark-primary" : "btn primary"} href={href}>
-      <span>{children}</span><ArrowIcon />
+    <a
+      className={dark ? "btn primary dark-primary" : "btn primary"}
+      href={href}
+    >
+      <span>{children}</span>
+      <ArrowIcon />
     </a>
   );
 }
 
 function SecondaryButton({ href, children, onDark = false }) {
   return (
-    <a className={onDark ? "btn secondary on-dark" : "btn secondary"} href={href}>
-      <span>{children}</span><ArrowIcon />
+    <a
+      className={onDark ? "btn secondary on-dark" : "btn secondary"}
+      href={href}
+    >
+      <span>{children}</span>
+      <ArrowIcon />
     </a>
   );
 }
@@ -114,7 +313,8 @@ function SecondaryButton({ href, children, onDark = false }) {
 function TextLink({ href, children, onDark = false }) {
   return (
     <a className={onDark ? "text-link on-dark" : "text-link"} href={href}>
-      <span>{children}</span><ArrowIcon size={16}/>
+      <span>{children}</span>
+      <ArrowIcon size={16} />
     </a>
   );
 }
@@ -123,9 +323,18 @@ function Eyebrow({ children, dark = false }) {
   return <div className={dark ? "eyebrow dark" : "eyebrow"}>{children}</div>;
 }
 
-function SectionHeading({ eyebrow, title, intro, align = "center", dark = false, className = "" }) {
+function SectionHeading({
+  eyebrow,
+  title,
+  intro,
+  align = "center",
+  dark = false,
+  className = "",
+}) {
   return (
-    <div className={`heading-group ${align} ${dark ? "inverse" : ""} ${className}`}>
+    <div
+      className={`heading-group ${align} ${dark ? "inverse" : ""} ${className}`}
+    >
       {eyebrow ? <Eyebrow dark={dark}>{eyebrow}</Eyebrow> : null}
       <h2>{title}</h2>
       {intro ? <p className="section-intro">{intro}</p> : null}
@@ -133,21 +342,46 @@ function SectionHeading({ eyebrow, title, intro, align = "center", dark = false,
   );
 }
 
-function HeroVisual() {
+const HeroVisual = () => {
   const stages = ["DETECT", "REUSE", "ROUTE", "TRANSLATE", "VALIDATE"];
   return (
-    <div className="hero-visual" role="img" aria-label="Illustration of changing source content moving through a continuous translation workflow into multilingual delivery">
+    <div
+      className="hero-visual"
+      role="img"
+      aria-label="Illustration of changing source content moving through a continuous translation workflow into multilingual delivery"
+    >
       <div className="hero-side source-side">
         <div className="visual-label">CHANGING CONTENT</div>
         <div className="source-stack">
-          <div className="source-item"><Icon name="cms" size={18}/><span>CMS update</span><span className="pulse-dot" /></div>
-          <div className="source-item"><Icon name="cart" size={18}/><span>Product record</span><span className="pulse-dot" /></div>
-          <div className="source-item"><Icon name="code" size={18}/><span>Software string</span><span className="pulse-dot" /></div>
-          <div className="source-item"><Icon name="book" size={18}/><span>Knowledge article</span><span className="pulse-dot" /></div>
+          <div className="source-item">
+            <Icon name="cms" size={18} />
+            <span>CMS update</span>
+            <span className="pulse-dot" />
+          </div>
+          <div className="source-item">
+            <Icon name="cart" size={18} />
+            <span>Product record</span>
+            <span className="pulse-dot" />
+          </div>
+          <div className="source-item">
+            <Icon name="code" size={18} />
+            <span>Software string</span>
+            <span className="pulse-dot" />
+          </div>
+          <div className="source-item">
+            <Icon name="book" size={18} />
+            <span>Knowledge article</span>
+            <span className="pulse-dot" />
+          </div>
         </div>
       </div>
       <div className="hero-core">
-        <div className="core-top"><span className="core-mark"><Icon name="spark" size={20}/></span><span>STEPES CONTINUOUS TRANSLATION</span></div>
+        <div className="core-top">
+          <span className="core-mark">
+            <Icon name="spark" size={20} />
+          </span>
+          <span>STEPES CONTINUOUS TRANSLATION</span>
+        </div>
         <div className="stage-list">
           {stages.map((stage, i) => (
             <div className="stage-row" key={stage}>
@@ -158,38 +392,96 @@ function HeroVisual() {
           ))}
         </div>
         <div className="core-paths">
-          <span>AI-FIRST</span><span>AI + HUMAN</span><span>EXPERT REVIEW</span>
+          <span>AI-FIRST</span>
+          <span>AI + HUMAN</span>
+          <span>EXPERT REVIEW</span>
         </div>
       </div>
       <div className="hero-side target-side">
         <div className="visual-label">GLOBAL DELIVERY</div>
         <div className="language-grid">
-          {[["DE","Aktuell"],["FR","À jour"],["JA","更新済み"],["ES","Actualizado"]].map(([code,label]) => (
-            <div className="language-item" key={code}><span className="lang-code">{code}</span><span>{label}</span><CheckIcon size={16}/></div>
+          {[
+            ["DE", "Aktuell"],
+            ["FR", "À jour"],
+            ["JA", "更新済み"],
+            ["ES", "Actualizado"],
+          ].map(([code, label]) => (
+            <div className="language-item" key={code}>
+              <span className="lang-code">{code}</span>
+              <span>{label}</span>
+              <CheckIcon size={16} />
+            </div>
           ))}
         </div>
-        <div className="sync-note"><span className="sync-dot"/> Synchronized with source</div>
+        <div className="sync-note">
+          <span className="sync-dot" /> Synchronized with source
+        </div>
       </div>
     </div>
   );
-}
+};
 
 const faqItems = [
-  ["What is continuous translation?", "Continuous translation is an ongoing approach to multilingual content in which new and changed source content can move through translation, review, quality validation, and delivery as part of a repeatable workflow. Instead of collecting every update into a separate translation project, organizations can connect translation more directly to the lifecycle of websites, software, product information, knowledge bases, customer support, marketing content, documentation, and other frequently changing information."],
-  ["What is continuous localization?", "Continuous localization integrates translation and localization into an ongoing content or product-development process rather than treating localization as a separate final stage. The term is especially common in software development, where localization can operate alongside agile and CI/CD workflows so new and changed product content moves toward multilingual release as part of regular development cycles."],
-  ["Are continuous translation and continuous localization the same?", "The terms overlap significantly. Continuous translation focuses on keeping translatable content moving through an ongoing multilingual workflow. Continuous localization often describes a broader process that may also include technical integration, locale adaptation, contextual review, testing, and release coordination. Stepes uses continuous translation more broadly across software and other frequently changing enterprise content."],
-  ["How is continuous translation different from traditional translation?", "Traditional translation is commonly organized around discrete projects: content is collected, submitted, translated, reviewed, delivered, and then the process begins again for the next update. Continuous translation is designed around recurring change. New or modified content can be detected, existing translations can be reused, workflow rules can select the appropriate translation and review process, and completed content can return to the business through a repeatable delivery path."],
-  ["Does continuous translation require CI/CD?", "No. CI/CD is an important continuous-localization use case for software companies, but continuous translation can support any content environment with frequent updates, including websites and CMS content, product catalogs, ecommerce platforms, knowledge bases, help centers, technical documentation, customer-support content, training systems, and structured enterprise data."],
-  ["What is agile localization?", "Agile localization aligns translation and localization with iterative development or content-production cycles. Instead of waiting until a product or content release is complete, localization happens throughout the process in smaller increments. Continuous localization builds on this principle by using repeatable integrations and workflows to keep frequent updates moving across languages with less manual intervention."],
-  ["How does AI support continuous translation?", "AI can support multiple stages of the continuous translation lifecycle. Depending on the workflow, AI can help analyze content and context, apply approved terminology, generate translations, evaluate linguistic output, identify potential quality issues, assist professional linguists, and support intelligent workflow routing. The appropriate use of AI depends on the content’s purpose, audience, business impact, language, quality requirements, and risk."],
-  ["Does continuous translation mean translations are automatically published?", "No. Continuous refers to the way localization responds to recurring content changes. It does not require every translation to bypass human review or approval. A workflow can include professional linguistic review, subject-matter validation, in-country feedback, localization testing, legal or regulatory review, and authorized stakeholder approval before content is released."],
-  ["Can continuous translation include professional human translators?", "Yes. Professional linguists remain important for content requiring linguistic judgment, subject-matter expertise, cultural understanding, brand sensitivity, creative adaptation, or higher levels of assurance. Continuous workflows can use professional translators throughout the process or selectively apply human expertise where it creates the most value."],
-  ["How does Translation Memory support continuous localization?", "Translation Memory stores previously translated source content together with approved translations. When identical or similar content appears in future updates, the workflow can identify those matches and reuse them when appropriate. This is especially valuable for frequent releases containing a mix of unchanged, repeated, modified, and completely new content."],
-  ["How does terminology management improve continuous translation?", "Terminology management establishes approved translations and usage guidance for product names, technical terminology, brand language, regulated expressions, and other important terms. Applying that terminology throughout recurring translation workflows improves consistency and reduces downstream corrections across translators, reviewers, and AI systems."],
-  ["What types of content are best suited to continuous translation?", "Continuous translation is particularly valuable for frequently updated websites, CMS content, software interfaces, SaaS products, mobile applications, product information, ecommerce catalogs, knowledge bases, help centers, customer support, AI-generated or AI-assisted content, technical documentation, marketing content, training content, and release documentation."],
-  ["Can Stepes connect continuous translation to our CMS, repository, or enterprise system?", "Stepes supports API-powered and automated translation workflows for organizations that need to connect localization with content, product, development, and enterprise systems. The appropriate integration model depends on your systems, content architecture, publishing process, security requirements, and localization workflow."],
-  ["How do you maintain translation quality when content changes frequently?", "Quality begins with matching the workflow to the content. Stepes can combine Translation Memory, terminology, AI-powered translation, automated quality checks, professional linguistic review, subject-matter expertise, contextual validation, testing, and stakeholder approvals according to each content stream’s requirements."],
-  ["Can different content types use different continuous translation workflows?", "Yes. A mature continuous localization program should not assume every content type requires the same process. Routine knowledge content, product data, customer-facing marketing, technical documentation, legal content, and regulated information may each require different combinations of AI translation, professional translation, review, quality assurance, and approval."],
+  [
+    "What is continuous translation?",
+    "Continuous translation is an ongoing approach to multilingual content in which new and changed source content can move through translation, review, quality validation, and delivery as part of a repeatable workflow. Instead of collecting every update into a separate translation project, organizations can connect translation more directly to the lifecycle of websites, software, product information, knowledge bases, customer support, marketing content, documentation, and other frequently changing information.",
+  ],
+  [
+    "What is continuous localization?",
+    "Continuous localization integrates translation and localization into an ongoing content or product-development process rather than treating localization as a separate final stage. The term is especially common in software development, where localization can operate alongside agile and CI/CD workflows so new and changed product content moves toward multilingual release as part of regular development cycles.",
+  ],
+  [
+    "Are continuous translation and continuous localization the same?",
+    "The terms overlap significantly. Continuous translation focuses on keeping translatable content moving through an ongoing multilingual workflow. Continuous localization often describes a broader process that may also include technical integration, locale adaptation, contextual review, testing, and release coordination. Stepes uses continuous translation more broadly across software and other frequently changing enterprise content.",
+  ],
+  [
+    "How is continuous translation different from traditional translation?",
+    "Traditional translation is commonly organized around discrete projects: content is collected, submitted, translated, reviewed, delivered, and then the process begins again for the next update. Continuous translation is designed around recurring change. New or modified content can be detected, existing translations can be reused, workflow rules can select the appropriate translation and review process, and completed content can return to the business through a repeatable delivery path.",
+  ],
+  [
+    "Does continuous translation require CI/CD?",
+    "No. CI/CD is an important continuous-localization use case for software companies, but continuous translation can support any content environment with frequent updates, including websites and CMS content, product catalogs, ecommerce platforms, knowledge bases, help centers, technical documentation, customer-support content, training systems, and structured enterprise data.",
+  ],
+  [
+    "What is agile localization?",
+    "Agile localization aligns translation and localization with iterative development or content-production cycles. Instead of waiting until a product or content release is complete, localization happens throughout the process in smaller increments. Continuous localization builds on this principle by using repeatable integrations and workflows to keep frequent updates moving across languages with less manual intervention.",
+  ],
+  [
+    "How does AI support continuous translation?",
+    "AI can support multiple stages of the continuous translation lifecycle. Depending on the workflow, AI can help analyze content and context, apply approved terminology, generate translations, evaluate linguistic output, identify potential quality issues, assist professional linguists, and support intelligent workflow routing. The appropriate use of AI depends on the content’s purpose, audience, business impact, language, quality requirements, and risk.",
+  ],
+  [
+    "Does continuous translation mean translations are automatically published?",
+    "No. Continuous refers to the way localization responds to recurring content changes. It does not require every translation to bypass human review or approval. A workflow can include professional linguistic review, subject-matter validation, in-country feedback, localization testing, legal or regulatory review, and authorized stakeholder approval before content is released.",
+  ],
+  [
+    "Can continuous translation include professional human translators?",
+    "Yes. Professional linguists remain important for content requiring linguistic judgment, subject-matter expertise, cultural understanding, brand sensitivity, creative adaptation, or higher levels of assurance. Continuous workflows can use professional translators throughout the process or selectively apply human expertise where it creates the most value.",
+  ],
+  [
+    "How does Translation Memory support continuous localization?",
+    "Translation Memory stores previously translated source content together with approved translations. When identical or similar content appears in future updates, the workflow can identify those matches and reuse them when appropriate. This is especially valuable for frequent releases containing a mix of unchanged, repeated, modified, and completely new content.",
+  ],
+  [
+    "How does terminology management improve continuous translation?",
+    "Terminology management establishes approved translations and usage guidance for product names, technical terminology, brand language, regulated expressions, and other important terms. Applying that terminology throughout recurring translation workflows improves consistency and reduces downstream corrections across translators, reviewers, and AI systems.",
+  ],
+  [
+    "What types of content are best suited to continuous translation?",
+    "Continuous translation is particularly valuable for frequently updated websites, CMS content, software interfaces, SaaS products, mobile applications, product information, ecommerce catalogs, knowledge bases, help centers, customer support, AI-generated or AI-assisted content, technical documentation, marketing content, training content, and release documentation.",
+  ],
+  [
+    "Can Stepes connect continuous translation to our CMS, repository, or enterprise system?",
+    "Stepes supports API-powered and automated translation workflows for organizations that need to connect localization with content, product, development, and enterprise systems. The appropriate integration model depends on your systems, content architecture, publishing process, security requirements, and localization workflow.",
+  ],
+  [
+    "How do you maintain translation quality when content changes frequently?",
+    "Quality begins with matching the workflow to the content. Stepes can combine Translation Memory, terminology, AI-powered translation, automated quality checks, professional linguistic review, subject-matter expertise, contextual validation, testing, and stakeholder approvals according to each content stream’s requirements.",
+  ],
+  [
+    "Can different content types use different continuous translation workflows?",
+    "Yes. A mature continuous localization program should not assume every content type requires the same process. Routine knowledge content, product data, customer-facing marketing, technical documentation, legal content, and regulated information may each require different combinations of AI translation, professional translation, review, quality assurance, and approval.",
+  ],
 ];
 
 function FAQ() {
@@ -207,14 +499,17 @@ function FAQ() {
               aria-controls={`continuous-faq-answer-${index}`}
               onClick={() => setOpenIndex(open ? -1 : index)}
             >
-              <span>{question}</span><ChevronIcon open={open}/>
+              <span>{question}</span>
+              <ChevronIcon open={open} />
             </button>
             <div
               id={`continuous-faq-answer-${index}`}
               className={open ? "faq-answer open" : "faq-answer"}
               aria-hidden={!open}
             >
-              <div><p>{answer}</p></div>
+              <div>
+                <p>{answer}</p>
+              </div>
             </div>
           </div>
         );
@@ -224,69 +519,237 @@ function FAQ() {
 }
 
 export default function ContinuousTranslationWireframe() {
+  console.log(typeof HeroVisual); // 应该输出 "function"
   const intelligence = [
-    ["Understand", "Interpret content type, context, audience, purpose, language requirements, and business importance before deciding how content should move.", "context"],
-    ["Reuse", "Search approved Translation Memory, terminology, style guidance, reference content, and existing multilingual assets before creating new language.", "memory"],
-    ["Route", "Direct content into the appropriate workflow based on audience, market, risk, timing, terminology, and review expectations.", "flow"],
-    ["Translate", "Apply the right production approach—from AI translation to AI-assisted professional review, expert human translation, or specialized workflows.", "globe"],
-    ["Evaluate", "Use automated quality controls and AI-assisted evaluation to surface terminology, consistency, completeness, formatting, and confidence issues.", "review"],
-    ["Escalate", "Move uncertain, sensitive, complex, high-value, or high-risk content to qualified linguists, specialists, or authorized stakeholders.", "shield"],
+    [
+      "Understand",
+      "Interpret content type, context, audience, purpose, language requirements, and business importance before deciding how content should move.",
+      "context",
+    ],
+    [
+      "Reuse",
+      "Search approved Translation Memory, terminology, style guidance, reference content, and existing multilingual assets before creating new language.",
+      "memory",
+    ],
+    [
+      "Route",
+      "Direct content into the appropriate workflow based on audience, market, risk, timing, terminology, and review expectations.",
+      "flow",
+    ],
+    [
+      "Translate",
+      "Apply the right production approach—from AI translation to AI-assisted professional review, expert human translation, or specialized workflows.",
+      "globe",
+    ],
+    [
+      "Evaluate",
+      "Use automated quality controls and AI-assisted evaluation to surface terminology, consistency, completeness, formatting, and confidence issues.",
+      "review",
+    ],
+    [
+      "Escalate",
+      "Move uncertain, sensitive, complex, high-value, or high-risk content to qualified linguists, specialists, or authorized stakeholders.",
+      "shield",
+    ],
   ];
 
   const governance = [
-    ["AI-First", "For repetitive, high-volume, time-sensitive, or lower-risk content where rapid multilingual availability is the primary objective.", "AI translation · TM · terminology · automated QA"],
-    ["AI + Professional Review", "For customer-facing, product, support, marketing, and operational content that benefits from AI speed together with professional linguistic validation.", "AI translation · linguist review · QA"],
-    ["Professional Translation", "For nuanced, specialized, technical, creative, or brand-sensitive content where experienced human translators provide linguistic judgment.", "Professional linguists · terminology · review"],
-    ["High-Assurance Review", "For legal, regulated, safety-critical, medical, financial, compliance-sensitive, or other high-impact content requiring additional validation or approval.", "Expert review · approvals · documented controls"],
+    [
+      "AI-First",
+      "For repetitive, high-volume, time-sensitive, or lower-risk content where rapid multilingual availability is the primary objective.",
+      "AI translation · TM · terminology · automated QA",
+    ],
+    [
+      "AI + Professional Review",
+      "For customer-facing, product, support, marketing, and operational content that benefits from AI speed together with professional linguistic validation.",
+      "AI translation · linguist review · QA",
+    ],
+    [
+      "Professional Translation",
+      "For nuanced, specialized, technical, creative, or brand-sensitive content where experienced human translators provide linguistic judgment.",
+      "Professional linguists · terminology · review",
+    ],
+    [
+      "High-Assurance Review",
+      "For legal, regulated, safety-critical, medical, financial, compliance-sensitive, or other high-impact content requiring additional validation or approval.",
+      "Expert review · approvals · documented controls",
+    ],
   ];
 
   const ecosystems = [
-    ["CMS", "Web content", "cms"], ["PIM", "Product data", "cart"], ["Repositories", "Software resources", "code"], ["Help Centers", "Support knowledge", "book"], ["DAM & Content", "Digital assets", "layers"], ["LMS", "Training", "document"], ["Support", "Customer content", "message"], ["Enterprise Apps", "Business systems", "flow"]
+    ["CMS", "Web content", "cms"],
+    ["PIM", "Product data", "cart"],
+    ["Repositories", "Software resources", "code"],
+    ["Help Centers", "Support knowledge", "book"],
+    ["DAM & Content", "Digital assets", "layers"],
+    ["LMS", "Training", "document"],
+    ["Support", "Customer content", "message"],
+    ["Enterprise Apps", "Business systems", "flow"],
   ];
 
   const useCases = [
-    ["Websites & CMS Content", "Corporate websites, landing pages, product pages, resource centers, metadata, forms, and regional experiences constantly evolve. Continuous website translation helps new and revised content move through translation, review, publishing, and multilingual SEO workflows.", "cms", LINKS.website, "Website Translation"],
-    ["Software & Applications", "UI strings, navigation, dialogs, notifications, onboarding flows, feature descriptions, release notes, and help content change with every release. Continuous software localization brings translation closer to product development.", "code", LINKS.software, "Software Localization"],
-    ["Ecommerce & Product Content", "New SKUs appear, specifications change, promotions launch, and product descriptions evolve. Continuous translation helps global commerce teams localize the changing product information customers need to discover and purchase products.", "cart", LINKS.ecommerce, "Ecommerce Translation"],
-    ["Knowledge & Customer Support", "Knowledge bases, help centers, FAQs, troubleshooting content, chatbot knowledge, ticket macros, and customer communications continuously respond to new products, issues, questions, and policies.", "book", LINKS.support, "Multilingual Customer Support"],
-    ["Marketing Content", "Landing pages, email programs, product launches, campaign variations, social content, digital promotions, and regional updates can all create ongoing localization demand while brand voice and market quality still matter.", "message", LINKS.marketing, "Marketing Translation"],
-    ["Technical & Product Documentation", "Specifications, manuals, operating procedures, instructions, release information, safety content, and technical knowledge require multilingual updates throughout the product lifecycle.", "document", LINKS.technical, "Technical Translation"],
+    [
+      "Websites & CMS Content",
+      "Corporate websites, landing pages, product pages, resource centers, metadata, forms, and regional experiences constantly evolve. Continuous website translation helps new and revised content move through translation, review, publishing, and multilingual SEO workflows.",
+      "cms",
+      LINKS.website,
+      "Website Translation",
+    ],
+    [
+      "Software & Applications",
+      "UI strings, navigation, dialogs, notifications, onboarding flows, feature descriptions, release notes, and help content change with every release. Continuous software localization brings translation closer to product development.",
+      "code",
+      LINKS.software,
+      "Software Localization",
+    ],
+    [
+      "Ecommerce & Product Content",
+      "New SKUs appear, specifications change, promotions launch, and product descriptions evolve. Continuous translation helps global commerce teams localize the changing product information customers need to discover and purchase products.",
+      "cart",
+      LINKS.ecommerce,
+      "Ecommerce Translation",
+    ],
+    [
+      "Knowledge & Customer Support",
+      "Knowledge bases, help centers, FAQs, troubleshooting content, chatbot knowledge, ticket macros, and customer communications continuously respond to new products, issues, questions, and policies.",
+      "book",
+      LINKS.support,
+      "Multilingual Customer Support",
+    ],
+    [
+      "Marketing Content",
+      "Landing pages, email programs, product launches, campaign variations, social content, digital promotions, and regional updates can all create ongoing localization demand while brand voice and market quality still matter.",
+      "message",
+      LINKS.marketing,
+      "Marketing Translation",
+    ],
+    [
+      "Technical & Product Documentation",
+      "Specifications, manuals, operating procedures, instructions, release information, safety content, and technical knowledge require multilingual updates throughout the product lifecycle.",
+      "document",
+      LINKS.technical,
+      "Technical Translation",
+    ],
   ];
 
   const languageAssets = [
-    ["Translation Memory", "Approved source and target content can be identified and reused in future work, reducing repetitive translation while supporting consistency across releases.", "memory"],
-    ["Terminology", "Validated product names, technical terms, brand language, regulated expressions, and market conventions stay available across recurring workflows.", "term"],
-    ["Style & Language Guidance", "Voice, tone, writing conventions, audience expectations, and project instructions guide recurring decisions beyond individual words and phrases.", "document"],
-    ["Reviewer Feedback", "Approved corrections can inform future cycles instead of disappearing inside one completed project.", "review"],
-    ["Context", "Product, interface, page, document, and audience context helps AI systems and professional linguists make better decisions about meaning and usage.", "context"],
-    ["Market Preferences", "Language-specific decisions and regional guidance can remain available for the teams and workflows that need them.", "market"],
+    [
+      "Translation Memory",
+      "Approved source and target content can be identified and reused in future work, reducing repetitive translation while supporting consistency across releases.",
+      "memory",
+    ],
+    [
+      "Terminology",
+      "Validated product names, technical terms, brand language, regulated expressions, and market conventions stay available across recurring workflows.",
+      "term",
+    ],
+    [
+      "Style & Language Guidance",
+      "Voice, tone, writing conventions, audience expectations, and project instructions guide recurring decisions beyond individual words and phrases.",
+      "document",
+    ],
+    [
+      "Reviewer Feedback",
+      "Approved corrections can inform future cycles instead of disappearing inside one completed project.",
+      "review",
+    ],
+    [
+      "Context",
+      "Product, interface, page, document, and audience context helps AI systems and professional linguists make better decisions about meaning and usage.",
+      "context",
+    ],
+    [
+      "Market Preferences",
+      "Language-specific decisions and regional guidance can remain available for the teams and workflows that need them.",
+      "market",
+    ],
   ];
 
   const process = [
-    ["Connect", "Connect content sources and delivery workflows through APIs, established integrations, files, or other appropriate content-transfer methods."],
-    ["Detect", "Identify content that is new or changed and determine what requires multilingual processing."],
-    ["Reuse", "Apply approved Translation Memory, terminology, style guidance, and existing multilingual knowledge before translating new content."],
-    ["Route & Translate", "Select the appropriate path according to content type, audience, language, business impact, turnaround, and quality requirements."],
-    ["Validate", "Apply automated QA, AI-assisted quality evaluation, professional review, in-context validation, testing, or stakeholder approval as required."],
-    ["Release", "Return approved multilingual content to the appropriate destination or downstream workflow, ready for the next source change."],
+    [
+      "Connect",
+      "Connect content sources and delivery workflows through APIs, established integrations, files, or other appropriate content-transfer methods.",
+    ],
+    [
+      "Detect",
+      "Identify content that is new or changed and determine what requires multilingual processing.",
+    ],
+    [
+      "Reuse",
+      "Apply approved Translation Memory, terminology, style guidance, and existing multilingual knowledge before translating new content.",
+    ],
+    [
+      "Route & Translate",
+      "Select the appropriate path according to content type, audience, language, business impact, turnaround, and quality requirements.",
+    ],
+    [
+      "Validate",
+      "Apply automated QA, AI-assisted quality evaluation, professional review, in-context validation, testing, or stakeholder approval as required.",
+    ],
+    [
+      "Release",
+      "Return approved multilingual content to the appropriate destination or downstream workflow, ready for the next source change.",
+    ],
   ];
 
   const benefits = [
-    ["Faster Global Releases", "Reduce the delay between source updates and multilingual availability by moving translation closer to content creation, development, and publishing."],
-    ["Less Manual Coordination", "Automate repetitive intake, routing, status updates, content transfer, review notifications, and delivery steps where appropriate."],
-    ["Lower Repetitive Translation Effort", "Focus production and review on new and changed content while maximizing approved Translation Memory and terminology assets."],
-    ["Better Content Parity", "Keep multilingual experiences more closely synchronized with authoritative source information as products and digital experiences evolve."],
-    ["More Consistent Global Language", "Apply shared language assets across recurring updates to reduce unnecessary variation in product, technical, brand, and customer-facing terminology."],
-    ["Human Expertise Where It Matters", "Focus qualified linguists, reviewers, and subject-matter experts on content requiring judgment, nuance, technical knowledge, cultural adaptation, or added assurance."],
+    [
+      "Faster Global Releases",
+      "Reduce the delay between source updates and multilingual availability by moving translation closer to content creation, development, and publishing.",
+    ],
+    [
+      "Less Manual Coordination",
+      "Automate repetitive intake, routing, status updates, content transfer, review notifications, and delivery steps where appropriate.",
+    ],
+    [
+      "Lower Repetitive Translation Effort",
+      "Focus production and review on new and changed content while maximizing approved Translation Memory and terminology assets.",
+    ],
+    [
+      "Better Content Parity",
+      "Keep multilingual experiences more closely synchronized with authoritative source information as products and digital experiences evolve.",
+    ],
+    [
+      "More Consistent Global Language",
+      "Apply shared language assets across recurring updates to reduce unnecessary variation in product, technical, brand, and customer-facing terminology.",
+    ],
+    [
+      "Human Expertise Where It Matters",
+      "Focus qualified linguists, reviewers, and subject-matter experts on content requiring judgment, nuance, technical knowledge, cultural adaptation, or added assurance.",
+    ],
   ];
 
   const related = [
-    ["Translation API", "Connect business systems to programmatic translation, project status, asynchronous processing, multilingual delivery, and event-driven workflows.", LINKS.api],
-    ["Workflow Automation", "Automate how content moves through intake, routing, language-asset reuse, translation, review, approvals, delivery, and reporting.", LINKS.workflow],
-    ["AI Translation", "Scale multilingual content with AI-powered translation supported by terminology, Translation Memory, context, and appropriate quality controls.", LINKS.ai],
-    ["Translation Memory", "Turn previous translations into reusable enterprise language assets that support consistency, speed, and efficient incremental localization.", LINKS.tm],
-    ["Terminology Management", "Apply approved product, technical, brand, and market terminology across AI systems, translators, reviewers, and recurring workflows.", LINKS.terminology],
-    ["Global Content Operations", "Coordinate multilingual intake, routing, language assets, professional resources, governance, reporting, and enterprise workflows across teams and markets.", LINKS.globalOps],
+    [
+      "Translation API",
+      "Connect business systems to programmatic translation, project status, asynchronous processing, multilingual delivery, and event-driven workflows.",
+      LINKS.api,
+    ],
+    [
+      "Workflow Automation",
+      "Automate how content moves through intake, routing, language-asset reuse, translation, review, approvals, delivery, and reporting.",
+      LINKS.workflow,
+    ],
+    [
+      "AI Translation",
+      "Scale multilingual content with AI-powered translation supported by terminology, Translation Memory, context, and appropriate quality controls.",
+      LINKS.ai,
+    ],
+    [
+      "Translation Memory",
+      "Turn previous translations into reusable enterprise language assets that support consistency, speed, and efficient incremental localization.",
+      LINKS.tm,
+    ],
+    [
+      "Terminology Management",
+      "Apply approved product, technical, brand, and market terminology across AI systems, translators, reviewers, and recurring workflows.",
+      LINKS.terminology,
+    ],
+    [
+      "Global Content Operations",
+      "Coordinate multilingual intake, routing, language assets, professional resources, governance, reporting, and enterprise workflows across teams and markets.",
+      LINKS.globalOps,
+    ],
   ];
 
   return (
@@ -620,17 +1083,47 @@ export default function ContinuousTranslationWireframe() {
           <div className="hero-copy">
             <Eyebrow>CONTINUOUS TRANSLATION & LOCALIZATION</Eyebrow>
             <h1>Continuous Translation for Always-On Global Content</h1>
-            <p className="lead">Your content never stops changing. Keep multilingual websites, software, product information, knowledge content, customer support, and other fast-moving digital experiences aligned with every source update using AI-powered translation, intelligent workflow automation, professional expertise, and connected delivery.</p>
+            <p className="lead">
+              Your content never stops changing. Keep multilingual websites,
+              software, product information, knowledge content, customer
+              support, and other fast-moving digital experiences aligned with
+              every source update using AI-powered translation, intelligent
+              workflow automation, professional expertise, and connected
+              delivery.
+            </p>
             <div className="hero-actions">
-              <PrimaryButton href={LINKS.contact}>Build Your Continuous Translation Workflow</PrimaryButton>
-              <SecondaryButton href={LINKS.api}>Explore Translation API</SecondaryButton>
+              <PrimaryButton href={LINKS.contact}>
+                Build Your Continuous Translation Workflow
+              </PrimaryButton>
+              <SecondaryButton href={LINKS.api}>
+                Explore Translation API
+              </SecondaryButton>
             </div>
           </div>
-          <div className="proof-bar" aria-label="Continuous translation capabilities">
-            <div className="proof-item"><strong>100+ Languages</strong><span>Professional coverage for global markets.</span></div>
-            <div className="proof-item"><strong>AI + Human Workflows</strong><span>Match translation and review to each content type.</span></div>
-            <div className="proof-item"><strong>Continuous Localization</strong><span>Keep multilingual content aligned with frequent updates.</span></div>
-            <div className="proof-item"><strong>Enterprise Integration</strong><span>Connect content systems through APIs and automated workflows.</span></div>
+          <div
+            className="proof-bar"
+            aria-label="Continuous translation capabilities"
+          >
+            <div className="proof-item">
+              <strong>100+ Languages</strong>
+              <span>Professional coverage for global markets.</span>
+            </div>
+            <div className="proof-item">
+              <strong>AI + Human Workflows</strong>
+              <span>Match translation and review to each content type.</span>
+            </div>
+            <div className="proof-item">
+              <strong>Continuous Localization</strong>
+              <span>
+                Keep multilingual content aligned with frequent updates.
+              </span>
+            </div>
+            <div className="proof-item">
+              <strong>Enterprise Integration</strong>
+              <span>
+                Connect content systems through APIs and automated workflows.
+              </span>
+            </div>
           </div>
           <HeroVisual />
         </div>
@@ -641,19 +1134,84 @@ export default function ContinuousTranslationWireframe() {
           <div className="sticky-heading">
             <div className="heading-group left center-mobile">
               <Eyebrow>THE CONTENT VELOCITY CHALLENGE</Eyebrow>
-              <h2>Your Content Never Stops Changing. Neither Should Localization.</h2>
+              <h2>
+                Your Content Never Stops Changing. Neither Should Localization.
+              </h2>
             </div>
           </div>
           <div className="body-copy">
-            <p className="body-large">Enterprise content used to move in relatively predictable publishing cycles. Today, websites change daily. Software ships continuously. Ecommerce catalogs expand. Support teams publish new knowledge. Product information evolves across channels. Marketing teams create more campaign variations for more audiences and markets.</p>
-            <p>AI is accelerating that content velocity even further. Generative AI makes it possible to create, update, personalize, and repurpose business content at unprecedented speed—from product descriptions and help articles to training materials, summaries, customer communications, and digital experiences.</p>
-            <p>Yet translation is still frequently managed as a sequence of isolated projects: collect the content, package it, send it for translation, wait, review it, reimport it, and repeat the process when something changes.</p>
-            <p>That model creates multilingual lag. Source content moves forward while translated versions wait for the next localization cycle. Product information becomes available in one language before others. Help centers drift out of sync. Software releases accumulate untranslated strings. Regional websites run different generations of the same content.</p>
-            <p className="emphasis">Continuous translation replaces that stop-and-start model with an ongoing multilingual content operation designed for content velocity.</p>
+            <p className="body-large">
+              Enterprise content used to move in relatively predictable
+              publishing cycles. Today, websites change daily. Software ships
+              continuously. Ecommerce catalogs expand. Support teams publish new
+              knowledge. Product information evolves across channels. Marketing
+              teams create more campaign variations for more audiences and
+              markets.
+            </p>
+            <p>
+              AI is accelerating that content velocity even further. Generative
+              AI makes it possible to create, update, personalize, and repurpose
+              business content at unprecedented speed—from product descriptions
+              and help articles to training materials, summaries, customer
+              communications, and digital experiences.
+            </p>
+            <p>
+              Yet translation is still frequently managed as a sequence of
+              isolated projects: collect the content, package it, send it for
+              translation, wait, review it, reimport it, and repeat the process
+              when something changes.
+            </p>
+            <p>
+              That model creates multilingual lag. Source content moves forward
+              while translated versions wait for the next localization cycle.
+              Product information becomes available in one language before
+              others. Help centers drift out of sync. Software releases
+              accumulate untranslated strings. Regional websites run different
+              generations of the same content.
+            </p>
+            <p className="emphasis">
+              Continuous translation replaces that stop-and-start model with an
+              ongoing multilingual content operation designed for content
+              velocity.
+            </p>
             <div className="content-stream">
-              <div className="stream-row"><span className="stream-icon"><Icon name="spark" size={19}/></span><div><strong>AI-Generated Content</strong><span>More source content, more variants, and more frequent updates create a permanent stream of multilingual change.</span></div></div>
-              <div className="stream-row"><span className="stream-icon"><Icon name="bolt" size={19}/></span><div><strong>Faster Release Cycles</strong><span>Digital products and content channels keep moving while traditional translation batches wait downstream.</span></div></div>
-              <div className="stream-row"><span className="stream-icon"><Icon name="globe" size={19}/></span><div><strong>Global Content Expectations</strong><span>Customers, employees, and partners expect current information across languages—not yesterday’s version of the experience.</span></div></div>
+              <div className="stream-row">
+                <span className="stream-icon">
+                  <Icon name="spark" size={19} />
+                </span>
+                <div>
+                  <strong>AI-Generated Content</strong>
+                  <span>
+                    More source content, more variants, and more frequent
+                    updates create a permanent stream of multilingual change.
+                  </span>
+                </div>
+              </div>
+              <div className="stream-row">
+                <span className="stream-icon">
+                  <Icon name="bolt" size={19} />
+                </span>
+                <div>
+                  <strong>Faster Release Cycles</strong>
+                  <span>
+                    Digital products and content channels keep moving while
+                    traditional translation batches wait downstream.
+                  </span>
+                </div>
+              </div>
+              <div className="stream-row">
+                <span className="stream-icon">
+                  <Icon name="globe" size={19} />
+                </span>
+                <div>
+                  <strong>Global Content Expectations</strong>
+                  <span>
+                    Customers, employees, and partners expect current
+                    information across languages—not yesterday’s version of the
+                    experience.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -661,195 +1219,689 @@ export default function ContinuousTranslationWireframe() {
 
       <section className="section soft-section" id="continuous-model">
         <div className="shell">
-          <SectionHeading title="From Translation Projects to Continuous Multilingual Operations" intro="Traditional translation is organized around projects. Continuously changing content needs an operating model built around recurring change." />
+          <SectionHeading
+            title="From Translation Projects to Continuous Multilingual Operations"
+            intro="Traditional translation is organized around projects. Continuously changing content needs an operating model built around recurring change."
+          />
           <div className="comparison">
             <div className="comparison-panel">
               <div className="panel-label">PROJECT-BASED TRANSLATION</div>
               <h3>Content Waits for the Next Translation Cycle</h3>
-              <div className="flow-line"><span>Collect</span><b className="flow-arrow">→</b><span>Package</span><b className="flow-arrow">→</b><span>Translate</span><b className="flow-arrow">→</b><span>Review</span><b className="flow-arrow">→</b><span>Deliver</span></div>
+              <div className="flow-line">
+                <span>Collect</span>
+                <b className="flow-arrow">→</b>
+                <span>Package</span>
+                <b className="flow-arrow">→</b>
+                <span>Translate</span>
+                <b className="flow-arrow">→</b>
+                <span>Review</span>
+                <b className="flow-arrow">→</b>
+                <span>Deliver</span>
+              </div>
               <div className="comparison-points">
-                {["Content is collected into batches.","Manual handoffs coordinate each request.","Unchanged content may be processed repeatedly.","Localized versions can lag behind the source.","Teams spend significant time recreating project administration."].map(item=><div className="comparison-point pain" key={item}><NeutralMarker size={17}/><span>{item}</span></div>)}
+                {[
+                  "Content is collected into batches.",
+                  "Manual handoffs coordinate each request.",
+                  "Unchanged content may be processed repeatedly.",
+                  "Localized versions can lag behind the source.",
+                  "Teams spend significant time recreating project administration.",
+                ].map((item) => (
+                  <div className="comparison-point pain" key={item}>
+                    <NeutralMarker size={17} />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="comparison-center"><span><ArrowIcon size={18}/></span></div>
+            <div className="comparison-center">
+              <span>
+                <ArrowIcon size={18} />
+              </span>
+            </div>
             <div className="comparison-panel continuous">
               <div className="panel-label">CONTINUOUS TRANSLATION</div>
               <h3>The Change Itself Becomes the Unit of Work</h3>
-              <div className="flow-line"><span>Detect</span><b className="flow-arrow">→</b><span>Reuse</span><b className="flow-arrow">→</b><span>Route</span><b className="flow-arrow">→</b><span>Translate</span><b className="flow-arrow">→</b><span>Validate</span><b className="flow-arrow">→</b><span>Release</span></div>
+              <div className="flow-line">
+                <span>Detect</span>
+                <b className="flow-arrow">→</b>
+                <span>Reuse</span>
+                <b className="flow-arrow">→</b>
+                <span>Route</span>
+                <b className="flow-arrow">→</b>
+                <span>Translate</span>
+                <b className="flow-arrow">→</b>
+                <span>Validate</span>
+                <b className="flow-arrow">→</b>
+                <span>Release</span>
+              </div>
               <div className="comparison-points">
-                {["New and changed content can trigger the workflow.","Approved translations and terminology are reused where appropriate.","Content follows the translation and review path it requires.","Localized content moves alongside the business.","Teams focus more on quality and global content strategy—and less on repetitive process."].map(item=><div className="comparison-point" key={item}><CheckIcon size={17}/><span>{item}</span></div>)}
+                {[
+                  "New and changed content can trigger the workflow.",
+                  "Approved translations and terminology are reused where appropriate.",
+                  "Content follows the translation and review path it requires.",
+                  "Localized content moves alongside the business.",
+                  "Teams focus more on quality and global content strategy—and less on repetitive process.",
+                ].map((item) => (
+                  <div className="comparison-point" key={item}>
+                    <CheckIcon size={17} />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-          <div className="big-callout">The future of translation is not more projects. It’s a continuous workflow.</div>
+          <div className="big-callout">
+            The future of translation is not more projects. It’s a continuous
+            workflow.
+          </div>
         </div>
       </section>
 
       <section className="section" id="translate-the-change">
         <div className="shell delta-grid">
           <div className="delta-copy">
-            <SectionHeading align="left" className="center-mobile" eyebrow="INCREMENTAL LOCALIZATION" title="Translate the Change, Not Everything Around It" intro="Most enterprise updates are incremental. Continuous translation focuses the workflow on what actually changed while protecting the language assets your organization has already approved." />
+            <SectionHeading
+              align="left"
+              className="center-mobile"
+              eyebrow="INCREMENTAL LOCALIZATION"
+              title="Translate the Change, Not Everything Around It"
+              intro="Most enterprise updates are incremental. Continuous translation focuses the workflow on what actually changed while protecting the language assets your organization has already approved."
+            />
             <div className="delta-points">
-              <div className="delta-point"><strong>Change Detection</strong><span>Identify content that is new, modified, removed, or otherwise affected by a source update.</span></div>
-              <div className="delta-point"><strong>Translation Memory</strong><span>Reuse approved translations whenever identical or similar content remains valid.</span></div>
-              <div className="delta-point"><strong>Terminology</strong><span>Apply approved product names, technical language, brand terms, and market conventions consistently.</span></div>
-              <div className="delta-point"><strong>Context & Versions</strong><span>Keep content relationships and version history connected to translation decisions.</span></div>
+              <div className="delta-point">
+                <strong>Change Detection</strong>
+                <span>
+                  Identify content that is new, modified, removed, or otherwise
+                  affected by a source update.
+                </span>
+              </div>
+              <div className="delta-point">
+                <strong>Translation Memory</strong>
+                <span>
+                  Reuse approved translations whenever identical or similar
+                  content remains valid.
+                </span>
+              </div>
+              <div className="delta-point">
+                <strong>Terminology</strong>
+                <span>
+                  Apply approved product names, technical language, brand terms,
+                  and market conventions consistently.
+                </span>
+              </div>
+              <div className="delta-point">
+                <strong>Context & Versions</strong>
+                <span>
+                  Keep content relationships and version history connected to
+                  translation decisions.
+                </span>
+              </div>
             </div>
             <TextLink href={LINKS.tm}>Explore Translation Memory</TextLink>
           </div>
-          <div className="delta-visual" role="img" aria-label="Illustration showing only changed content entering translation">
-            <div className="doc-head"><div className="doc-title"><Icon name="document" size={19}/> Product Guide</div><span className="doc-version">SOURCE · v12.4</span></div>
-            <div className="doc-lines">
-              <div className="doc-line w90"/><div className="doc-line changed">UPDATED · Operating temperature revised</div><div className="doc-line w74"/><div className="doc-line w96"/><div className="doc-line changed">NEW · Safety notice added</div><div className="doc-line w84"/><div className="doc-line w70"/>
+          <div
+            className="delta-visual"
+            role="img"
+            aria-label="Illustration showing only changed content entering translation"
+          >
+            <div className="doc-head">
+              <div className="doc-title">
+                <Icon name="document" size={19} /> Product Guide
+              </div>
+              <span className="doc-version">SOURCE · v12.4</span>
             </div>
-            <div className="delta-output"><div><strong>2 content changes detected</strong><span>Unchanged approved content remains intact.</span></div><span className="delta-badge">DELTA READY</span></div>
+            <div className="doc-lines">
+              <div className="doc-line w90" />
+              <div className="doc-line changed">
+                UPDATED · Operating temperature revised
+              </div>
+              <div className="doc-line w74" />
+              <div className="doc-line w96" />
+              <div className="doc-line changed">NEW · Safety notice added</div>
+              <div className="doc-line w84" />
+              <div className="doc-line w70" />
+            </div>
+            <div className="delta-output">
+              <div>
+                <strong>2 content changes detected</strong>
+                <span>Unchanged approved content remains intact.</span>
+              </div>
+              <span className="delta-badge">DELTA READY</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section dark-section" id="ai-intelligence">
         <div className="shell intelligence-wrap">
-          <SectionHeading align="left" dark eyebrow="AI-POWERED ORCHESTRATION" title="AI Makes Continuous Translation Intelligent" intro="Continuous translation is not simply machine translation running more frequently. AI can help understand content, apply language knowledge, select the right process, evaluate output, and focus professional expertise where it creates the greatest value." />
+          <SectionHeading
+            align="left"
+            dark
+            eyebrow="AI-POWERED ORCHESTRATION"
+            title="AI Makes Continuous Translation Intelligent"
+            intro="Continuous translation is not simply machine translation running more frequently. AI can help understand content, apply language knowledge, select the right process, evaluate output, and focus professional expertise where it creates the greatest value."
+          />
           <div>
             <div className="intelligence-list">
-              {intelligence.map(([title,description,icon])=><div className="intelligence-row" key={title}><span className="intelligence-icon"><Icon name={icon} size={21}/></span><h3>{title}</h3><p>{description}</p></div>)}
+              {intelligence.map(([title, description, icon]) => (
+                <div className="intelligence-row" key={title}>
+                  <span className="intelligence-icon">
+                    <Icon name={icon} size={21} />
+                  </span>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              ))}
             </div>
-            <div className="dark-note">The goal is not to automate everything equally. It is to make better decisions about <strong>what should be automated, what should be reviewed, and where human expertise matters most.</strong></div>
-            <div style={{display:"flex",gap:24,flexWrap:"wrap",marginTop:22}}><TextLink href={LINKS.ai} onDark>Explore AI Translation</TextLink><TextLink href={LINKS.aiWorkflows} onDark>Explore AI-Powered Translation Workflows</TextLink></div>
+            <div className="dark-note">
+              The goal is not to automate everything equally. It is to make
+              better decisions about{" "}
+              <strong>
+                what should be automated, what should be reviewed, and where
+                human expertise matters most.
+              </strong>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: 24,
+                flexWrap: "wrap",
+                marginTop: 22,
+              }}
+            >
+              <TextLink href={LINKS.ai} onDark>
+                Explore AI Translation
+              </TextLink>
+              <TextLink href={LINKS.aiWorkflows} onDark>
+                Explore AI-Powered Translation Workflows
+              </TextLink>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section" id="governance">
         <div className="shell">
-          <SectionHeading className="scan-heading" eyebrow="RISK-BASED QUALITY" title="Continuous Doesn’t Mean Uncontrolled" intro="The fastest possible workflow is not automatically the right workflow. Different content streams can use different combinations of AI, professional expertise, review, quality assurance, and approval." />
+          <SectionHeading
+            className="scan-heading"
+            eyebrow="RISK-BASED QUALITY"
+            title="Continuous Doesn’t Mean Uncontrolled"
+            intro="The fastest possible workflow is not automatically the right workflow. Different content streams can use different combinations of AI, professional expertise, review, quality assurance, and approval."
+          />
           <div className="governance-panel">
-            <div className="governance-head"><span>WORKFLOW</span><span>BEST FIT</span><span>QUALITY & CONTROL</span></div>
-            {governance.map(([title,desc,controls])=><div className="governance-row" key={title}><div className="governance-title">{title}</div><div className="governance-description">{desc}</div><div className="governance-controls">{controls}</div></div>)}
+            <div className="governance-head">
+              <span>WORKFLOW</span>
+              <span>BEST FIT</span>
+              <span>QUALITY & CONTROL</span>
+            </div>
+            {governance.map(([title, desc, controls]) => (
+              <div className="governance-row" key={title}>
+                <div className="governance-title">{title}</div>
+                <div className="governance-description">{desc}</div>
+                <div className="governance-controls">{controls}</div>
+              </div>
+            ))}
           </div>
           <div className="governance-note">
-            <p><strong>Automation accelerates the workflow. Governance determines how far automation should go.</strong> Workflow decisions can reflect the content’s audience, market, business impact, regulatory requirements, terminology, turnaround, and approval needs.</p>
-            <div className="governance-factors">{["Content type","Audience","Language","Market","Business impact","Risk","Terminology","Turnaround","Review level","Stakeholder approval"].map(x=><span key={x}>{x}</span>)}</div>
+            <p>
+              <strong>
+                Automation accelerates the workflow. Governance determines how
+                far automation should go.
+              </strong>{" "}
+              Workflow decisions can reflect the content’s audience, market,
+              business impact, regulatory requirements, terminology, turnaround,
+              and approval needs.
+            </p>
+            <div className="governance-factors">
+              {[
+                "Content type",
+                "Audience",
+                "Language",
+                "Market",
+                "Business impact",
+                "Risk",
+                "Terminology",
+                "Turnaround",
+                "Review level",
+                "Stakeholder approval",
+              ].map((x) => (
+                <span key={x}>{x}</span>
+              ))}
+            </div>
           </div>
-          <TextLink href={LINKS.workflow}>Explore Translation Workflow Automation</TextLink>
+          <TextLink href={LINKS.workflow}>
+            Explore Translation Workflow Automation
+          </TextLink>
         </div>
       </section>
 
       <section className="section soft-section" id="content-parity">
         <div className="shell sync-layout">
           <div className="sync-copy">
-            <SectionHeading align="left" eyebrow="CONTENT PARITY" title="Multilingual Content That Never Falls Behind" intro="Fast translation is useful. Current translation is more important. Continuous workflows help every language stay aligned with the authoritative source as your content evolves." />
+            <SectionHeading
+              align="left"
+              eyebrow="CONTENT PARITY"
+              title="Multilingual Content That Never Falls Behind"
+              intro="Fast translation is useful. Current translation is more important. Continuous workflows help every language stay aligned with the authoritative source as your content evolves."
+            />
             <div className="sync-benefits">
-              <div className="sync-benefit"><strong>Keep Languages Aligned</strong><span>Move relevant changes through translation as authoritative content evolves.</span></div>
-              <div className="sync-benefit"><strong>Reduce Translation Drift</strong><span>Avoid localized versions gradually becoming disconnected from current source information.</span></div>
-              <div className="sync-benefit"><strong>Improve Global Release Readiness</strong><span>Bring localization earlier into digital, product, and publishing workflows.</span></div>
-              <div className="sync-benefit"><strong>Create More Consistent Experiences</strong><span>Give international audiences access to current product, support, software, and digital content.</span></div>
+              <div className="sync-benefit">
+                <strong>Keep Languages Aligned</strong>
+                <span>
+                  Move relevant changes through translation as authoritative
+                  content evolves.
+                </span>
+              </div>
+              <div className="sync-benefit">
+                <strong>Reduce Translation Drift</strong>
+                <span>
+                  Avoid localized versions gradually becoming disconnected from
+                  current source information.
+                </span>
+              </div>
+              <div className="sync-benefit">
+                <strong>Improve Global Release Readiness</strong>
+                <span>
+                  Bring localization earlier into digital, product, and
+                  publishing workflows.
+                </span>
+              </div>
+              <div className="sync-benefit">
+                <strong>Create More Consistent Experiences</strong>
+                <span>
+                  Give international audiences access to current product,
+                  support, software, and digital content.
+                </span>
+              </div>
             </div>
           </div>
-          <div className="sync-visual" role="img" aria-label="Illustration of synchronized language versions">
-            <div className="sync-source"><strong>Authoritative Source</strong><span>Current release · 12.4</span></div>
-            <div className="version-rows">
-              {["EN","DE","FR","JA","ES"].map(code=><div className="version-row" key={code}><strong>{code}</strong><span className="version-bar"/><span className="version-state"><i className="mini-dot"/>Current</span></div>)}
+          <div
+            className="sync-visual"
+            role="img"
+            aria-label="Illustration of synchronized language versions"
+          >
+            <div className="sync-source">
+              <strong>Authoritative Source</strong>
+              <span>Current release · 12.4</span>
             </div>
-            <div className="sync-message">All active markets aligned with the current source release</div>
+            <div className="version-rows">
+              {["EN", "DE", "FR", "JA", "ES"].map((code) => (
+                <div className="version-row" key={code}>
+                  <strong>{code}</strong>
+                  <span className="version-bar" />
+                  <span className="version-state">
+                    <i className="mini-dot" />
+                    Current
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="sync-message">
+              All active markets aligned with the current source release
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section" id="ecosystem">
         <div className="shell">
-          <SectionHeading title="One Continuous Workflow Across Your Content Ecosystem" intro="Your content already lives inside business systems. Translation should connect to that ecosystem—not require teams to repeatedly export, email, upload, download, and reimport every update." />
+          <SectionHeading
+            title="One Continuous Workflow Across Your Content Ecosystem"
+            intro="Your content already lives inside business systems. Translation should connect to that ecosystem—not require teams to repeatedly export, email, upload, download, and reimport every update."
+          />
           <div className="ecosystem">
-            <div className="ecosystem-side left">{ecosystems.slice(0,4).map(([title,sub,icon])=><div className="ecosystem-node" key={title}><span className="node-icon"><Icon name={icon} size={20}/></span><div><strong>{title}</strong><span>{sub}</span></div></div>)}</div>
-            <div className="ecosystem-core"><span className="core-icon"><Icon name="flow" size={25}/></span><strong>Stepes Continuous Translation</strong><p>One connected path for language assets, translation, review, quality controls, approvals, and delivery.</p><div className="micro-flow"><span>CONTENT EVENT</span><span>↓</span><span>INTELLIGENT WORKFLOW</span><span>↓</span><span>MULTILINGUAL DELIVERY</span></div></div>
-            <div className="ecosystem-side right">{ecosystems.slice(4).map(([title,sub,icon])=><div className="ecosystem-node" key={title}><span className="node-icon"><Icon name={icon} size={20}/></span><div><strong>{title}</strong><span>{sub}</span></div></div>)}</div>
+            <div className="ecosystem-side left">
+              {ecosystems.slice(0, 4).map(([title, sub, icon]) => (
+                <div className="ecosystem-node" key={title}>
+                  <span className="node-icon">
+                    <Icon name={icon} size={20} />
+                  </span>
+                  <div>
+                    <strong>{title}</strong>
+                    <span>{sub}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="ecosystem-core">
+              <span className="core-icon">
+                <Icon name="flow" size={25} />
+              </span>
+              <strong>Stepes Continuous Translation</strong>
+              <p>
+                One connected path for language assets, translation, review,
+                quality controls, approvals, and delivery.
+              </p>
+              <div className="micro-flow">
+                <span>CONTENT EVENT</span>
+                <span>↓</span>
+                <span>INTELLIGENT WORKFLOW</span>
+                <span>↓</span>
+                <span>MULTILINGUAL DELIVERY</span>
+              </div>
+            </div>
+            <div className="ecosystem-side right">
+              {ecosystems.slice(4).map(([title, sub, icon]) => (
+                <div className="ecosystem-node" key={title}>
+                  <span className="node-icon">
+                    <Icon name={icon} size={20} />
+                  </span>
+                  <div>
+                    <strong>{title}</strong>
+                    <span>{sub}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="ecosystem-summary">With event-driven integration, a content update can initiate the multilingual workflow instead of waiting for someone to manually create another translation project. The Stepes Translation API supports programmatic content submission, asynchronous processing, project and job tracking, multilingual results, and signed webhook events so downstream systems can continue the content lifecycle.</p>
-          <div className="ecosystem-links"><TextLink href={LINKS.api}>Explore Translation API</TextLink><TextLink href={LINKS.apiDocs}>View Translation API Documentation</TextLink></div>
+          <p className="ecosystem-summary">
+            With event-driven integration, a content update can initiate the
+            multilingual workflow instead of waiting for someone to manually
+            create another translation project. The Stepes Translation API
+            supports programmatic content submission, asynchronous processing,
+            project and job tracking, multilingual results, and signed webhook
+            events so downstream systems can continue the content lifecycle.
+          </p>
+          <div className="ecosystem-links">
+            <TextLink href={LINKS.api}>Explore Translation API</TextLink>
+            <TextLink href={LINKS.apiDocs}>
+              View Translation API Documentation
+            </TextLink>
+          </div>
         </div>
       </section>
 
       <section className="section blush-section" id="beyond-software">
         <div className="shell">
-          <SectionHeading className="scan-heading" eyebrow="ENTERPRISE CONTENT COVERAGE" title="Continuous Translation Beyond Software" intro="Continuous localization became closely associated with agile software development, but the same operating model now applies wherever enterprise content changes faster than traditional translation projects can comfortably follow." />
+          <SectionHeading
+            className="scan-heading"
+            eyebrow="ENTERPRISE CONTENT COVERAGE"
+            title="Continuous Translation Beyond Software"
+            intro="Continuous localization became closely associated with agile software development, but the same operating model now applies wherever enterprise content changes faster than traditional translation projects can comfortably follow."
+          />
           <div className="usecase-list">
-            {useCases.map(([title,desc,icon,href,label])=><div className="usecase-row" key={title}><span className="usecase-icon"><Icon name={icon} size={22}/></span><h3>{title}</h3><p>{desc}</p><div className="usecase-action">{href?<TextLink href={href}>{label}</TextLink>:null}</div></div>)}
+            {useCases.map(([title, desc, icon, href, label]) => (
+              <div className="usecase-row" key={title}>
+                <span className="usecase-icon">
+                  <Icon name={icon} size={22} />
+                </span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <div className="usecase-action">
+                  {href ? <TextLink href={href}>{label}</TextLink> : null}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section dark-section" id="cicd">
         <div className="shell ci-layout">
-          <SectionHeading align="left" className="scan-heading" dark eyebrow="AGILE & CI/CD LOCALIZATION" title="Built for Agile and CI/CD Localization" intro="Software development moved from infrequent major releases to continuous iteration. Continuous localization brings multilingual content into the same product lifecycle so translation can happen alongside development instead of waiting downstream." />
+          <SectionHeading
+            align="left"
+            className="scan-heading"
+            dark
+            eyebrow="AGILE & CI/CD LOCALIZATION"
+            title="Built for Agile and CI/CD Localization"
+            intro="Software development moved from infrequent major releases to continuous iteration. Continuous localization brings multilingual content into the same product lifecycle so translation can happen alongside development instead of waiting downstream."
+          />
           <div>
             <div className="ci-flow">
-              <div className="ci-flow-head"><strong>Continuous Software Localization</strong><span>Example release workflow</span></div>
-              <div className="ci-steps">{[["Source Update","New or changed strings"],["Detect","Relevant content enters localization"],["Reuse","TM and terminology applied"],["Translate","AI + human workflow"],["Validate","QA and in-context review"],["Release","Localized resources returned"]].map(([a,b])=><div className="ci-step" key={a}><strong>{a}</strong><span>{b}</span></div>)}</div>
+              <div className="ci-flow-head">
+                <strong>Continuous Software Localization</strong>
+                <span>Example release workflow</span>
+              </div>
+              <div className="ci-steps">
+                {[
+                  ["Source Update", "New or changed strings"],
+                  ["Detect", "Relevant content enters localization"],
+                  ["Reuse", "TM and terminology applied"],
+                  ["Translate", "AI + human workflow"],
+                  ["Validate", "QA and in-context review"],
+                  ["Release", "Localized resources returned"],
+                ].map(([a, b]) => (
+                  <div className="ci-step" key={a}>
+                    <strong>{a}</strong>
+                    <span>{b}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="ci-details">
-              <div className="ci-detail"><strong>Connect to Development</strong><span>Support recurring localization around repositories, branches, APIs, resource files, release milestones, or other established product workflows.</span></div>
-              <div className="ci-detail"><strong>Detect Changed Strings</strong><span>Distinguish new and modified content from unchanged resources so translation effort stays focused on the current release.</span></div>
-              <div className="ci-detail"><strong>Protect Product Context</strong><span>Apply Translation Memory, terminology, instructions, screenshots, metadata, and product references as part of recurring software localization.</span></div>
-              <div className="ci-detail"><strong>Validate the Experience</strong><span>Use in-context review and localization testing to find truncation, layout, locale, functionality, formatting, and user-experience issues before release.</span></div>
+              <div className="ci-detail">
+                <strong>Connect to Development</strong>
+                <span>
+                  Support recurring localization around repositories, branches,
+                  APIs, resource files, release milestones, or other established
+                  product workflows.
+                </span>
+              </div>
+              <div className="ci-detail">
+                <strong>Detect Changed Strings</strong>
+                <span>
+                  Distinguish new and modified content from unchanged resources
+                  so translation effort stays focused on the current release.
+                </span>
+              </div>
+              <div className="ci-detail">
+                <strong>Protect Product Context</strong>
+                <span>
+                  Apply Translation Memory, terminology, instructions,
+                  screenshots, metadata, and product references as part of
+                  recurring software localization.
+                </span>
+              </div>
+              <div className="ci-detail">
+                <strong>Validate the Experience</strong>
+                <span>
+                  Use in-context review and localization testing to find
+                  truncation, layout, locale, functionality, formatting, and
+                  user-experience issues before release.
+                </span>
+              </div>
             </div>
-            <div style={{display:"flex",gap:24,flexWrap:"wrap",marginTop:20}}><TextLink href={LINKS.software} onDark>Explore Software Localization</TextLink><TextLink href={LINKS.continuousGuide} onDark>Read the Continuous Mobile Localization Guide</TextLink></div>
+            <div
+              style={{
+                display: "flex",
+                gap: 24,
+                flexWrap: "wrap",
+                marginTop: 20,
+              }}
+            >
+              <TextLink href={LINKS.software} onDark>
+                Explore Software Localization
+              </TextLink>
+              <TextLink href={LINKS.continuousGuide} onDark>
+                Read the Continuous Mobile Localization Guide
+              </TextLink>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section" id="language-assets">
         <div className="shell asset-layout">
-          <SectionHeading align="left" eyebrow="CONTINUOUS LANGUAGE INTELLIGENCE" title="Your Language Assets Get Smarter With Every Release" intro="A continuous localization program should accumulate knowledge—not accumulate rework. Every translation your organization approves can become an asset for the next content update." />
+          <SectionHeading
+            align="left"
+            eyebrow="CONTINUOUS LANGUAGE INTELLIGENCE"
+            title="Your Language Assets Get Smarter With Every Release"
+            intro="A continuous localization program should accumulate knowledge—not accumulate rework. Every translation your organization approves can become an asset for the next content update."
+          />
           <div className="asset-grid">
-            {languageAssets.map(([title,desc,icon])=><div className="asset-item" key={title}><span className="asset-icon"><Icon name={icon} size={21}/></span><h3>{title}</h3><p>{desc}</p></div>)}
-            <div className="asset-quote">Continuous localization should accumulate knowledge, not recreate it.</div>
+            {languageAssets.map(([title, desc, icon]) => (
+              <div className="asset-item" key={title}>
+                <span className="asset-icon">
+                  <Icon name={icon} size={21} />
+                </span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
+            <div className="asset-quote">
+              Continuous localization should accumulate knowledge, not recreate
+              it.
+            </div>
           </div>
           <div></div>
-          <div style={{display:"flex",gap:24,flexWrap:"wrap"}}><TextLink href={LINKS.tm}>Explore Translation Memory</TextLink><TextLink href={LINKS.terminology}>Explore Terminology Management</TextLink></div>
+          <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
+            <TextLink href={LINKS.tm}>Explore Translation Memory</TextLink>
+            <TextLink href={LINKS.terminology}>
+              Explore Terminology Management
+            </TextLink>
+          </div>
         </div>
       </section>
 
       <section className="section soft-section" id="process">
         <div className="shell">
-          <SectionHeading className="scan-heading" eyebrow="THE STEPES OPERATING MODEL" title="From Content Change to Global Release" intro="Continuous translation connects technology, professional language services, quality controls, and enterprise systems into one coordinated lifecycle designed around your content, markets, and risk." />
+          <SectionHeading
+            className="scan-heading"
+            eyebrow="THE STEPES OPERATING MODEL"
+            title="From Content Change to Global Release"
+            intro="Continuous translation connects technology, professional language services, quality controls, and enterprise systems into one coordinated lifecycle designed around your content, markets, and risk."
+          />
           <div className="process">
-            {process.map(([title,desc],index)=><div className="process-row" key={title}><span className="process-number">{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{desc}</p></div>)}
+            {process.map(([title, desc], index) => (
+              <div className="process-row" key={title}>
+                <span className="process-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
           </div>
-          <div className="process-summary">Connect → Detect → Reuse → Route & Translate → Validate → Release</div>
+          <div className="process-summary">
+            Connect → Detect → Reuse → Route & Translate → Validate → Release
+          </div>
         </div>
       </section>
 
       <section className="section" id="benefits">
         <div className="shell">
-          <SectionHeading title="Designed for Enterprise Content Velocity" intro="Continuous translation turns localization from a recurring operational bottleneck into a more scalable global content capability." />
-          <div className="benefit-grid">{benefits.map(([title,desc])=><div className="benefit-item" key={title}><h3>{title}</h3><p>{desc}</p></div>)}</div>
+          <SectionHeading
+            title="Designed for Enterprise Content Velocity"
+            intro="Continuous translation turns localization from a recurring operational bottleneck into a more scalable global content capability."
+          />
+          <div className="benefit-grid">
+            {benefits.map(([title, desc]) => (
+              <div className="benefit-item" key={title}>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="section blush-section" id="technology-and-people">
         <div className="shell">
-          <SectionHeading eyebrow="AI + PROFESSIONAL EXPERTISE" title="Technology Keeps Content Moving. People Protect What Matters." intro="Enterprise continuous translation requires more than software—and more than linguistic capacity alone. Stepes brings both into one governed multilingual operating model." />
+          <SectionHeading
+            eyebrow="AI + PROFESSIONAL EXPERTISE"
+            title="Technology Keeps Content Moving. People Protect What Matters."
+            intro="Enterprise continuous translation requires more than software—and more than linguistic capacity alone. Stepes brings both into one governed multilingual operating model."
+          />
           <div className="dual-panel">
-            <div className="dual-side"><span className="dual-icon"><Icon name="spark" size={24}/></span><h3>Intelligent Translation Technology</h3><p>Use AI translation, Translation Memory, terminology management, automated quality controls, APIs, webhooks, workflow automation, and program visibility to reduce repetitive work and keep multilingual content moving.</p><div className="dual-list"><div><CheckIcon size={17}/>AI-powered translation and quality support</div><div><CheckIcon size={17}/>Reusable language assets</div><div><CheckIcon size={17}/>APIs, webhooks, and workflow automation</div><div><CheckIcon size={17}/>Connected status, approvals, and delivery</div></div></div>
-            <div className="dual-side"><span className="dual-icon"><Icon name="review" size={24}/></span><h3>Professional Language Expertise</h3><p>Apply experienced translators, editors, localization specialists, subject-matter linguists, and reviewers when content requires linguistic judgment, market understanding, technical knowledge, creativity, or additional quality assurance.</p><div className="dual-list"><div><CheckIcon size={17}/>Professional translation and review</div><div><CheckIcon size={17}/>Subject-matter and market expertise</div><div><CheckIcon size={17}/>In-context linguistic validation</div><div><CheckIcon size={17}/>High-assurance review and approval</div></div></div>
+            <div className="dual-side">
+              <span className="dual-icon">
+                <Icon name="spark" size={24} />
+              </span>
+              <h3>Intelligent Translation Technology</h3>
+              <p>
+                Use AI translation, Translation Memory, terminology management,
+                automated quality controls, APIs, webhooks, workflow automation,
+                and program visibility to reduce repetitive work and keep
+                multilingual content moving.
+              </p>
+              <div className="dual-list">
+                <div>
+                  <CheckIcon size={17} />
+                  AI-powered translation and quality support
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  Reusable language assets
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  APIs, webhooks, and workflow automation
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  Connected status, approvals, and delivery
+                </div>
+              </div>
+            </div>
+            <div className="dual-side">
+              <span className="dual-icon">
+                <Icon name="review" size={24} />
+              </span>
+              <h3>Professional Language Expertise</h3>
+              <p>
+                Apply experienced translators, editors, localization
+                specialists, subject-matter linguists, and reviewers when
+                content requires linguistic judgment, market understanding,
+                technical knowledge, creativity, or additional quality
+                assurance.
+              </p>
+              <div className="dual-list">
+                <div>
+                  <CheckIcon size={17} />
+                  Professional translation and review
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  Subject-matter and market expertise
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  In-context linguistic validation
+                </div>
+                <div>
+                  <CheckIcon size={17} />
+                  High-assurance review and approval
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="dual-statement">AI for scale. Professional expertise for judgment. One continuous workflow for global content.</div>
-          <div className="dual-action"><TextLink href={LINKS.aiHuman}>Explore AI + Human Translation Workflows</TextLink></div>
+          <div className="dual-statement">
+            AI for scale. Professional expertise for judgment. One continuous
+            workflow for global content.
+          </div>
+          <div className="dual-action">
+            <TextLink href={LINKS.aiHuman}>
+              Explore AI + Human Translation Workflows
+            </TextLink>
+          </div>
         </div>
       </section>
 
       <section className="section" id="related-capabilities">
         <div className="shell">
-          <SectionHeading title="Build the Workflow Around Your Content" intro="Continuous translation works best as part of a connected enterprise localization architecture. Use the capabilities you need to keep content moving while preserving quality, consistency, and control." />
+          <SectionHeading
+            title="Build the Workflow Around Your Content"
+            intro="Continuous translation works best as part of a connected enterprise localization architecture. Use the capabilities you need to keep content moving while preserving quality, consistency, and control."
+          />
           <div className="related-grid">
-            {related.map(([title,desc,href])=><div className="related-item" key={title}><h3>{title}</h3><p>{desc}</p><TextLink href={href}>Explore {title}</TextLink></div>)}
+            {related.map(([title, desc, href]) => (
+              <div className="related-item" key={title}>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <TextLink href={href}>Explore {title}</TextLink>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="section soft-section" id="faq">
         <div className="shell">
-          <SectionHeading className="scan-heading" title="Continuous Translation & Continuous Localization FAQs" intro="Practical answers about continuous localization, AI, human review, CI/CD, Translation Memory, quality, and enterprise integration." />
+          <SectionHeading
+            className="scan-heading"
+            title="Continuous Translation & Continuous Localization FAQs"
+            intro="Practical answers about continuous localization, AI, human review, CI/CD, Translation Memory, quality, and enterprise integration."
+          />
           <FAQ />
         </div>
       </section>
@@ -858,9 +1910,22 @@ export default function ContinuousTranslationWireframe() {
         <div className="shell">
           <div className="final-cta-inner">
             <h2>Keep Global Content Moving With Your Business</h2>
-            <p>Your products will keep evolving. Your teams will keep publishing. AI will keep increasing the speed and volume of content creation. Stepes connects AI, workflow automation, Translation Memory, terminology, professional linguists, quality controls, APIs, and enterprise content operations into an always-on multilingual workflow designed around change.</p>
-            <p className="final-kicker">Make every relevant content change a global content change.</p>
-            <div className="final-actions"><PrimaryButton href={LINKS.contact}>Build Your Continuous Translation Workflow</PrimaryButton></div>
+            <p>
+              Your products will keep evolving. Your teams will keep publishing.
+              AI will keep increasing the speed and volume of content creation.
+              Stepes connects AI, workflow automation, Translation Memory,
+              terminology, professional linguists, quality controls, APIs, and
+              enterprise content operations into an always-on multilingual
+              workflow designed around change.
+            </p>
+            <p className="final-kicker">
+              Make every relevant content change a global content change.
+            </p>
+            <div className="final-actions">
+              <PrimaryButton href={LINKS.contact}>
+                Build Your Continuous Translation Workflow
+              </PrimaryButton>
+            </div>
           </div>
         </div>
       </section>

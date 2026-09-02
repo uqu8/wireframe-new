@@ -602,12 +602,16 @@ const routes = [
     path: "/sitemap/",
   },
   {
-    name: "Stepes_Continuous_Translation_5.6_Wireframe_v3.jsx",
+    name: "Stepes_Continuous_Translation_5.6_Wireframe_v3",
     path: "/continuous-translation/",
   },
   {
-    name: "Stepes_Biotechnology_Translation_Services_Wireframe_v3_20260901.jsx",
+    name: "Stepes_Biotechnology_Translation_Services_Wireframe_v3_20260901",
     path: "/biotechnology-translation-services/",
+  },
+  {
+    name: "Stepes_Packaging_Translation_Services_5.6_Wireframe_20260901_v4",
+    path: "/packaging-translation-services/",
   },
 ];
 
