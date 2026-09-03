@@ -613,6 +613,22 @@ const routes = [
     name: "Stepes_Packaging_Translation_Services_5.6_Wireframe_20260901_v4",
     path: "/packaging-translation-services/",
   },
+  {
+    name: "Stepes_Catalog_Translation_Services_5_6_Wireframe_v4",
+    path: "/catalog-translation-services/",
+  },
+  {
+    name: "Stepes_Election_Translation_Services_5_6_Wireframe_Final_Polish",
+    path: "/election-translation-services/",
+  },
+  {
+    name: "Stepes_Localization_Services_5.6_Wireframe_Final_Polish",
+    path: "/localization-services/",
+  },
+  {
+    name: "Stepes_Multimedia_Localization_5_6_Wireframe_v3",
+    path: "/multimedia-translation-services/",
+  },
 ];
 
 export default routes;
