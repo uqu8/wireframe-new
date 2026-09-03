@@ -629,6 +629,10 @@ const routes = [
     name: "Stepes_Multimedia_Localization_5_6_Wireframe_v3",
     path: "/multimedia-translation-services/",
   },
+  {
+    name: "Stepes_Survey_Translation_Services_5_6_Wireframe_v3",
+    path: "/survey-translation-services/",
+  },
 ];
 
 export default routes;
