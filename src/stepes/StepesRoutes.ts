@@ -645,6 +645,10 @@ const routes = [
     name: "Stepes_Religious_Translation_Services_5_6_Wireframe_Final_QA",
     path: "/religious-translation-services/",
   },
+  {
+    name: "Stepes_Religious_Translation_Services_5_6_Wireframe_Final_QA",
+    path: "/services/",
+  },
 ];
 
 export default routes;
