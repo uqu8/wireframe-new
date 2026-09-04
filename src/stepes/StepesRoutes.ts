@@ -633,6 +633,14 @@ const routes = [
     name: "Stepes_Survey_Translation_Services_5_6_Wireframe_v3",
     path: "/survey-translation-services/",
   },
+  {
+    name: "stepes_solutions_5_6_wireframe_v3",
+    path: "/solutions/",
+  },
+  {
+    name: "stepes-pdf-translation-services-wireframe-v3",
+    path: "/pdf-translation-services/",
+  },
 ];
 
 export default routes;
