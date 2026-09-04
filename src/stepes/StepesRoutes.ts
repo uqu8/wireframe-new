@@ -641,6 +641,10 @@ const routes = [
     name: "stepes-pdf-translation-services-wireframe-v3",
     path: "/pdf-translation-services/",
   },
+  {
+    name: "Stepes_Religious_Translation_Services_5_6_Wireframe_Final_QA",
+    path: "/religious-translation-services/",
+  },
 ];
 
 export default routes;
