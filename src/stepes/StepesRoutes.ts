@@ -653,6 +653,42 @@ const routes = [
     name: "Stepes_Chinese_Patent_Translation_Services_Wireframe_v3",
     path: "/chinese-patent-translation-services/",
   },
+  {
+    name: "Stepes_German_Patent_Translation_Services_Wireframe_v3",
+    path: "/german-patent-translation-services/",
+  },
+  {
+    name: "Stepes_Japanese_Patent_Translation_Services_Wireframe_v3",
+    path: "/japanese-patent-translation-services/",
+  },
+  {
+    name: "Stepes_Korean_Patent_Translation_Services_Wireframe_v3",
+    path: "/korean-patent-translation-services/",
+  },
+  {
+    name: "Stepes_Industrial_Automation_Translation_Wireframe_v3",
+    path: "/industrial-automation-translation/",
+  },
+  {
+    name: "Stepes_Semiconductor_Translation_Services_Wireframe_v3",
+    path: "/semiconductor-translation-services/",
+  },
+  {
+    name: "Stepes_Logistics_Translation_Services_Wireframe_v3",
+    path: "/logistics-translation-services/",
+  },
+  {
+    name: "Stepes_Cybersecurity_Translation_Services_5_6_Wireframe_v3",
+    path: "/cybersecurity-translation-services/",
+  },
+  {
+    name: "Stepes_HR_Translation_Services_5_6_Wireframe_Syntax_Fixed",
+    path: "/human-resource-translation-services/",
+  },
+  {
+    name: "stepes-pct-patent-translation-national-phase-guide-wireframe-v3",
+    path: "/resources/translation-guides/pct-patent-translation-national-phase-guide/",
+  },
 ];
 
 export default routes;
