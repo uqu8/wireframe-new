@@ -646,8 +646,12 @@ const routes = [
     path: "/religious-translation-services/",
   },
   {
-    name: "Stepes_Religious_Translation_Services_5_6_Wireframe_Final_QA",
+    name: "Stepes_Services_5_6_Wireframe_Final_Polish_20260903",
     path: "/services/",
+  },
+  {
+    name: "Stepes_Chinese_Patent_Translation_Services_Wireframe_v3",
+    path: "/chinese-patent-translation-services/",
   },
 ];
 
