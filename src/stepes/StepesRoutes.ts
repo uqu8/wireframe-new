@@ -689,6 +689,10 @@ const routes = [
     name: "stepes-pct-patent-translation-national-phase-guide-wireframe-v3",
     path: "/resources/translation-guides/pct-patent-translation-national-phase-guide/",
   },
+  {
+    name: "Stepes_Chemical_Patent_Translation_5_6_Wireframe_v4",
+    path: "/chemical-patent-translation-services/",
+  },
 ];
 
 export default routes;
