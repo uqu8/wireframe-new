@@ -693,6 +693,18 @@ const routes = [
     name: "Stepes_Chemical_Patent_Translation_5_6_Wireframe_v4",
     path: "/chemical-patent-translation-services/",
   },
+  {
+    name: "Stepes_Patent_Claims_Translation_Quality_Checklist_Wireframe_v3",
+    path: "/resources/translation-guides/patent-claims-translation-quality-checklist/",
+  },
+  {
+    name: "Stepes_Prior_Art_Translation_Guide_Wireframe_v3",
+    path: "/resources/translation-guides/prior-art-translation-patentability-fto-invalidity/",
+  },
+  {
+    name: "Stepes_Safety_Document_Translation_Services_Wireframe_v4",
+    path: "/safety-document-translation-services/",
+  },
 ];
 
 export default routes;
