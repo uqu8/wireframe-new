@@ -705,6 +705,10 @@ const routes = [
     name: "Stepes_Safety_Document_Translation_Services_Wireframe_v4",
     path: "/safety-document-translation-services/",
   },
+  {
+    name: "Stepes_IVD_Translation_5_6_Wireframe_v3",
+    path: "/in-vitro-diagnostics-translation/",
+  },
 ];
 
 export default routes;
