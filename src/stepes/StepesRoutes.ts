@@ -709,6 +709,10 @@ const routes = [
     name: "Stepes_IVD_Translation_5_6_Wireframe_v3",
     path: "/in-vitro-diagnostics-translation/",
   },
+  {
+    name: "Stepes_Chinese_Legal_Translation_5_6_Wireframe_v3",
+    path: "/chinese-legal-translation-services/",
+  },
 ];
 
 export default routes;
