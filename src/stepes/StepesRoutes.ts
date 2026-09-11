@@ -713,6 +713,14 @@ const routes = [
     name: "Stepes_Chinese_Legal_Translation_5_6_Wireframe_v3",
     path: "/chinese-legal-translation-services/",
   },
+  {
+    name: "stepes-ma-translation-services-5_6-wireframe-v5",
+    path: "/merger-acquisition-translation-services/",
+  },
+  {
+    name: "Stepes_Litigation_Translation_Services_5.6_Wireframe_Final_QA",
+    path: "/litigation-translation-services/",
+  },
 ];
 
 export default routes;
